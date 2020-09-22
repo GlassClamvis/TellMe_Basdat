@@ -79,7 +79,7 @@
 
                     <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
                         <li class="d-none d-sm-flex nav-item">
-                            <a href="<?php echo base_url('index.php/Welcome/login')?>" class="btn btn-accent">LOGIN</a>
+                            <a href="<?php echo base_url('login')?>" class="btn btn-accent">LOGIN</a>
                         </li>
                     </ul>
 
