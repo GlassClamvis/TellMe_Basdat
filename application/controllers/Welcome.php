@@ -17,12 +17,16 @@ class Welcome extends CI_Controller {
 
 	public function login()
 	{
+		$this->load->view('index/v_header_index');
 		$this->load->view('index/v_login');
+		$this->load->view('index/v_footer_index');
 	}
 
 	public function lupa_password()
 	{
+		$this->load->view('index/v_header_index');
 		$this->load->view('index/v_lupa_password');
+		$this->load->view('index/v_footer_index');
 	}
 
 }

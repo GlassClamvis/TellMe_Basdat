@@ -15,7 +15,7 @@
                                 <p class="mb-0"><a href="" class="text-white-70 text-underline"><strong>Are you a teacher?</strong></a></p>
                             </div>
                             <div class="col-md-6 col-lg-7 order-0 order-md-1 text-center mb-32pt mb-md-0">
-                                <img src="assets/images/macbook-teal.png" alt="macbook" class="home-macbook">
+                                <img src="<?php echo base_url('assets/tealdark/images/macbook-teal.png')?>" alt="macbook" class="home-macbook">
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
 
 
                                 <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/angular_430x168.png" alt="course">
+                                    <img src="<?php echo base_url('assets/tealdark/images/paths/angular_430x168.png')?>" alt="course">
                                     <span class="overlay__content">
                                         <span class="overlay__action d-flex flex-column text-center">
                                             <i class="material-icons">play_circle_outline</i>
@@ -117,7 +117,7 @@
                             <div class="popoverContainer d-none">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
+                                        <img src="<?php echo base_url('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
                                         <div class="card-title mb-0">Learn Angular fundamentals</div>
@@ -182,7 +182,7 @@
 
 
                                 <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/swift_430x168.png" alt="course">
+                                    <img src="<?php echo base_url('assets/tealdark/images/paths/swift_430x168.png')?>" alt="course">
                                     <span class="overlay__content">
                                         <span class="overlay__action d-flex flex-column text-center">
                                             <i class="material-icons">play_circle_outline</i>
@@ -216,7 +216,7 @@
                             <div class="popoverContainer d-none">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="assets/images/paths/swift_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
+                                        <img src="<?php echo base_url('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
                                         <div class="card-title mb-0">Build an iOS Application in Swift</div>
@@ -281,7 +281,7 @@
 
 
                                 <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/wordpress_430x168.png" alt="course">
+                                    <img src="<?php echo base_url('assets/tealdark/images/paths/wordpress_430x168.png')?>" alt="course">
                                     <span class="overlay__content">
                                         <span class="overlay__action d-flex flex-column text-center">
                                             <i class="material-icons">play_circle_outline</i>
@@ -315,7 +315,7 @@
                             <div class="popoverContainer d-none">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="assets/images/paths/wordpress_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
+                                        <img src="<?php echo base_url('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
                                         <div class="card-title mb-0">Build a WordPress Website</div>
@@ -380,7 +380,7 @@
 
 
                                 <a href="course.html" class="js-image" data-position="left">
-                                    <img src="assets/images/paths/react_430x168.png" alt="course">
+                                    <img src="<?php echo base_url('assets/tealdark/images/paths/react_430x168.png')?>" alt="course">
                                     <span class="overlay__content">
                                         <span class="overlay__action d-flex flex-column text-center">
                                             <i class="material-icons">play_circle_outline</i>
@@ -414,7 +414,7 @@
                             <div class="popoverContainer d-none">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="assets/images/paths/react_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
+                                        <img src="<?php echo base_url('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
                                         <div class="card-title mb-0">Become a React Native Developer</div>
@@ -479,7 +479,7 @@
 
 
                                 <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/redis_430x168.png" alt="course">
+                                    <img src="<?php echo base_url('assets/tealdark/images/paths/redis_430x168.png')?>" alt="course">
                                     <span class="overlay__content">
                                         <span class="overlay__action d-flex flex-column text-center">
                                             <i class="material-icons">play_circle_outline</i>
@@ -513,7 +513,7 @@
                             <div class="popoverContainer d-none">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="assets/images/paths/redis_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
+                                        <img src="<?php echo base_url('assets/tealdark/images/paths/redis_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
                                         <div class="card-title mb-0">Become a Redis Developer</div>
@@ -578,7 +578,7 @@
 
 
                                 <a href="course.html" class="js-image" data-position="left">
-                                    <img src="assets/images/paths/typescript_430x168.png" alt="course">
+                                    <img src="<?php echo base_url('assets/tealdark/images/paths/typescript_430x168.png')?>" alt="course">
                                     <span class="overlay__content">
                                         <span class="overlay__action d-flex flex-column text-center">
                                             <i class="material-icons">play_circle_outline</i>
@@ -612,7 +612,7 @@
                             <div class="popoverContainer d-none">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="assets/images/paths/typescript_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
+                                        <img src="<?php echo base_url('assets/tealdark/images/paths/typescript_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
                                         <div class="card-title mb-0">Introduction to Typescript</div>
@@ -677,7 +677,7 @@
 
 
                                 <a href="course.html" class="js-image" data-position="center">
-                                    <img src="assets/images/paths/devops_430x168.png" alt="course">
+                                    <img src="<?php echo base_url('assets/tealdark/images/paths/devops_430x168.png')?>" alt="course">
                                     <span class="overlay__content">
                                         <span class="overlay__action d-flex flex-column text-center">
                                             <i class="material-icons">play_circle_outline</i>
@@ -711,7 +711,7 @@
                             <div class="popoverContainer d-none">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="assets/images/paths/devops_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
+                                        <img src="<?php echo base_url('assets/tealdark/images/paths/devops_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
                                         <div class="card-title mb-0">Become a DevOps Engineer</div>
@@ -776,7 +776,7 @@
 
 
                                 <a href="course.html" class="js-image" data-position="left">
-                                    <img src="assets/images/paths/angular_testing_430x168.png" alt="course">
+                                    <img src="<?php echo base_url('assets/tealdark/images/paths/angular_testing_430x168.png')?>" alt="course">
                                     <span class="overlay__content">
                                         <span class="overlay__action d-flex flex-column text-center">
                                             <i class="material-icons">play_circle_outline</i>
@@ -810,7 +810,7 @@
                             <div class="popoverContainer d-none">
                                 <div class="media">
                                     <div class="media-left">
-                                        <img src="assets/images/paths/angular_40x40@2x.png" width="40" height="40" alt="Angular" class="rounded">
+                                        <img src="<?php echo base_url('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
                                         <div class="card-title mb-0">Angular Unit Testing</div>
@@ -892,7 +892,7 @@
                                 <a href="path.html" class="card stack stack--hidden-hover card-featured-path overlay js-overlay">
                                     <span class="card-featured-path__content">
                                         <span data-position="center" class="js-image" data-height="96">
-                                            <img src="assets/images/paths/angular_430x168.png" alt="course">
+                                            <img src="<?php echo base_url('assets/tealdark/images/paths/angular_430x168.png')?>" alt="course">
                                         </span>
                                         <span class="overlay__content">
                                             <span class="overlay__action card-title mb-0">Angular</span>
@@ -906,7 +906,7 @@
                                 <a href="path.html" class="card stack stack--hidden-hover card-featured-path overlay js-overlay">
                                     <span class="card-featured-path__content">
                                         <span data-position="left" class="js-image" data-height="96">
-                                            <img src="assets/images/paths/react_430x168.png" alt="course">
+                                            <img src="<?php echo base_url('assets/tealdark/images/paths/react_430x168.png')?>" alt="course">
                                         </span>
                                         <span class="overlay__content">
                                             <span class="overlay__action card-title mb-0">React Native</span>
@@ -920,7 +920,7 @@
                                 <a href="path.html" class="card stack stack--hidden-hover card-featured-path overlay js-overlay">
                                     <span class="card-featured-path__content">
                                         <span data-position="center" class="js-image" data-height="96">
-                                            <img src="assets/images/paths/swift_430x168.png" alt="course">
+                                            <img src="<?php echo base_url('assets/tealdark/images/paths/swift_430x168.png')?>" alt="course">
                                         </span>
                                         <span class="overlay__content">
                                             <span class="overlay__action card-title mb-0">Swift</span>
@@ -936,7 +936,7 @@
                     <div class="row mt-16pt mt-lg-32pt">
                         <div class="col-i8-6 col-md-3 mb-16pt">
                             <a href="path.html" class="media">
-                                <img src="assets/images/paths/angular_40x40@2x.png" width="40" height="40" alt="Angular" class="media-left rounded">
+                                <img src="<?php echo base_url('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="media-left rounded">
                                 <span class="media-body">
                                     <span class="card-title text-body d-block mb-0">Angular</span>
                                     <span class="text-muted d-flex lh-1">24 courses</span>
@@ -945,7 +945,7 @@
                         </div>
                         <div class="col-i8-6 col-md-3 mb-16pt">
                             <a href="path.html" class="media">
-                                <img src="assets/images/paths/react_40x40@2x.png" width="40" height="40" alt="React Native" class="media-left rounded">
+                                <img src="<?php echo base_url('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="React Native" class="media-left rounded">
                                 <span class="media-body">
                                     <span class="card-title text-body d-block mb-0">React Native</span>
                                     <span class="text-muted d-flex lh-1">18 courses</span>
@@ -954,7 +954,7 @@
                         </div>
                         <div class="col-i8-6 col-md-3 mb-16pt">
                             <a href="path.html" class="media">
-                                <img src="assets/images/paths/swift_40x40@2x.png" width="40" height="40" alt="Swift" class="media-left rounded">
+                                <img src="<?php echo base_url('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Swift" class="media-left rounded">
                                 <span class="media-body">
                                     <span class="card-title text-body d-block mb-0">Swift</span>
                                     <span class="text-muted d-flex lh-1">22 courses</span>
@@ -963,7 +963,7 @@
                         </div>
                         <div class="col-i8-6 col-md-3 mb-16pt">
                             <a href="path.html" class="media">
-                                <img src="assets/images/paths/wordpress_40x40@2x.png" width="40" height="40" alt="WordPress" class="media-left rounded">
+                                <img src="<?php echo base_url('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="WordPress" class="media-left rounded">
                                 <span class="media-body">
                                     <span class="card-title text-body d-block mb-0">WordPress</span>
                                     <span class="text-muted d-flex lh-1">13 courses</span>
@@ -972,7 +972,7 @@
                         </div>
                         <div class="col-i8-6 col-md-3 mb-16pt">
                             <a href="path.html" class="media">
-                                <img src="assets/images/paths/swift_40x40@2x.png" width="40" height="40" alt="Swift" class="media-left rounded">
+                                <img src="<?php echo base_url('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Swift" class="media-left rounded">
                                 <span class="media-body">
                                     <span class="card-title text-body d-block mb-0">Swift</span>
                                     <span class="text-muted d-flex lh-1">22 courses</span>
@@ -981,7 +981,7 @@
                         </div>
                         <div class="col-i8-6 col-md-3 mb-16pt">
                             <a href="path.html" class="media">
-                                <img src="assets/images/paths/wordpress_40x40@2x.png" width="40" height="40" alt="WordPress" class="media-left rounded">
+                                <img src="<?php echo base_url('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="WordPress" class="media-left rounded">
                                 <span class="media-body">
                                     <span class="card-title text-body d-block mb-0">WordPress</span>
                                     <span class="text-muted d-flex lh-1">13 courses</span>
@@ -990,7 +990,7 @@
                         </div>
                         <div class="col-i8-6 col-md-3 mb-16pt">
                             <a href="path.html" class="media">
-                                <img src="assets/images/paths/devops_40x40@2x.png" width="40" height="40" alt="Development Tools" class="media-left rounded">
+                                <img src="<?php echo base_url('assets/tealdark/images/paths/devops_40x40@2x.png')?>" width="40" height="40" alt="Development Tools" class="media-left rounded">
                                 <span class="media-body">
                                     <span class="card-title text-body d-block mb-0">Development Tools</span>
                                     <span class="text-muted d-flex lh-1">5 courses</span>
@@ -999,7 +999,7 @@
                         </div>
                         <div class="col-i8-6 col-md-3 mb-16pt">
                             <a href="path.html" class="media">
-                                <img src="assets/images/paths/react_40x40@2x.png" width="40" height="40" alt="React Native" class="media-left rounded">
+                                <img src="<?php echo base_url('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="React Native" class="media-left rounded">
                                 <span class="media-body">
                                     <span class="card-title text-body d-block mb-0">React Native</span>
                                     <span class="text-muted d-flex lh-1">18 courses</span>
@@ -1036,7 +1036,7 @@
 
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <img src="assets/images/people/110/guy-1.jpg" width="40" alt="avatar" class="rounded-circle">
+                                                    <img src="<?php echo base_url ('assets/tealdark/images/people/110/guy-1.jpg')?>" width="40" alt="avatar" class="rounded-circle">
                                                 </div>
                                                 <div class="media-body media-middle">
                                                     <p class="mb-0"><a href="" class="text-body"><strong>Umberto Kass</strong></a></p>
@@ -1060,7 +1060,7 @@
 
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <img src="assets/images/people/110/guy-2.jpg" width="40" alt="avatar" class="rounded-circle">
+                                                    <img src="<?php echo base_url ('assets/tealdark/images/people/110/guy-2.jpg')?>" width="40" alt="avatar" class="rounded-circle">
                                                 </div>
                                                 <div class="media-body media-middle">
                                                     <p class="mb-0"><a href="" class="text-body"><strong>Umberto Kass</strong></a></p>
