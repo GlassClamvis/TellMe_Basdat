@@ -62,7 +62,7 @@
                     </button>
 
                     <!-- Navbar Brand -->
-                    <a href="" class="navbar-brand">
+                    <a href="<?php echo base_url('')?>" class="navbar-brand">
                       <img class="navbar-brand-icon" src="<?php echo base_url('assets/tealdark/images/logo/white-100@2x.png')?>" width="30" alt="">
                       <img src="<?php echo base_url('assets/tealdark/images/logo/white-100@2x.png')?>" class="navbar-brand-icon" width="30" alt="">
                         <span class="d-none d-md-block">Tell Me Basdat</span>
@@ -79,7 +79,7 @@
 
                     <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
                         <li class="d-none d-sm-flex nav-item">
-                            <a href="index.php/welcome/login" class="btn btn-accent">LOGIN</a>
+                            <a href="<?php echo base_url('index.php/Welcome/login')?>" class="btn btn-accent">LOGIN</a>
                         </li>
                     </ul>
 
