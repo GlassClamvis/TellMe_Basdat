@@ -63,8 +63,8 @@
 
                     <!-- Navbar Brand -->
                     <a href="index.html" class="navbar-brand">
-                        <img class="navbar-brand-icon mr-0 mr-md-8pt" src="<?php echo base_url('assets/tealdark/images/logo/white-100@2x.png')?>" width="30" alt="Tutorio">
-                        <span class="d-none d-md-block">Tutorio</span>
+                        <!-- <img class="navbar-brand-icon mr-0 mr-md-8pt" src="<?php echo base_url('assets/tealdark/images/logo/white-100@2x.png')?>" width="30" alt="Tutorio"> -->
+                        <span class="d-none d-md-block">TellMe</span>
                     </a>
 
                     <button class="btn btn-black mr-16pt" data-toggle="modal" data-target="#courses">Courses <i class="material-icons">arrow_drop_down</i></button>
@@ -77,12 +77,18 @@
                     <!-- Main Navigation -->
 
                     <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
-                        <li class="ml-16pt nav-item">
+                        
+                        <li class="d-none d-sm-flex nav-item">
+                            <a href="index.php/Welcome/lupa_password" class="btn btn-accent">Lupa Password</a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
+                        <!-- <li class="ml-16pt nav-item">
                             <a href="login.html" class="nav-link">
                                 <i class="material-icons">lock_open</i>
                                 <span class="sr-only">Login</span>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="d-none d-sm-flex nav-item">
                             <a href="index.php/Welcome/login" class="btn btn-accent">LOGIN</a>
                         </li>

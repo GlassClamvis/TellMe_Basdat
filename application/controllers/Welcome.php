@@ -20,4 +20,9 @@ class Welcome extends CI_Controller {
 		$this->load->view('index/v_login');
 	}
 
+	public function lupa_password()
+	{
+		$this->load->view('index/v_lupa_password');
+	}
+
 }
