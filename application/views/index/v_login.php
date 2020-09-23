@@ -30,7 +30,7 @@
                         <div class="form-group">
                             <label for="password">Password:</label>
                             <input id="password" type="password" class="form-control" placeholder="Your password ...">
-                            <p class="text-right"><a href="lupa_password" class="small">Forgot your password?</a></p>
+                            <p class="text-right"><a href="<?php echo base_url('Lupa_password')?>" class="small">Forgot your password?</a></p>
                         </div>
                         <div class="text-center">
                             <button class="btn btn-lg btn-accent">Login</button>
