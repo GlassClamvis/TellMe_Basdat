@@ -10,9 +10,8 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('index/v_header_index');
-		$this->load->view('index/v_index');
-		$this->load->view('index/v_footer_index');
+		$this->template->home();
+		
 	}
 
 }

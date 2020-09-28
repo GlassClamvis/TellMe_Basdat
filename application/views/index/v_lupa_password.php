@@ -1,3 +1,5 @@
+<?php $this->load->view("templates/head.php")?>
+<?php $this->load->view("templates/header.php")?>
 <!-- Header Layout Content -->
 <div class="mdk-header-layout__content page-content pb-0">
 
@@ -118,3 +120,6 @@
 
 </div>
 <!-- // END Header Layout -->
+<?php $this->load->view("templates/footer.php") ?>
+<?php $this->load->view("templates/theme.php") ?>
+<?php $this->load->view("templates/js.php") ?>
