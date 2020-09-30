@@ -190,7 +190,7 @@
             <!-- Brand -->
             <a href="index.html" class="sidebar-brand">
                 <img class="sidebar-brand-icon" src="<?php echo base_url('assets/tealdark/images/logo/white-100.svg')?>" width="30" alt="">
-                <span>Tutorio</span>
+                <span>Tell Me</span>
             </a>
             <!-- // END Brand -->
 
@@ -443,15 +443,6 @@
 </div>
 </div>
 <!-- // END drawer -->
-<!-- App Settings FAB -->
-<div id="app-settings">
-<app-settings theme-active="teal-dark" :theme-location="{
-'blue-light': 'http://tutorio-bootstrap.frontendmatter.com/login.html',
-'blue-dark': 'http://tutorio-dark.frontendmatter.com/login.html',
-'teal-light': 'http://tutorio-teal.frontendmatter.com/login.html',
-'teal-dark': 'http://tutorio-teal-dark.frontendmatter.com/login.html'
-}" sidebar-type="dark" sidebar-variant="bg-transparent border-0"></app-settings>
-</div>
 <!-- Modal -->
 <div class="modal courses-modal" id="courses" tabindex="-1" role="dialog">
 <div class="modal-dialog" role="document">

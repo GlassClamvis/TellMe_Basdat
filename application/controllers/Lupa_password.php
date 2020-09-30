@@ -7,9 +7,8 @@ class Lupa_password extends CI_Controller {
 		parent::__construct();
 	}
 
-	public function index()
-	{
-		$this->template->Lupa_password();
+	public function index(){
+      $this->template->Lupa_password('v_lupa_password');
 	}
 
 }

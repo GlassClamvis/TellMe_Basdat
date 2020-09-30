@@ -23,7 +23,7 @@
 
                     <!-- Navbar Brand -->
                     <a href="<?php echo base_url('Welcome')?>" class="navbar-brand">
-                      <img class="navbar-brand-icon" src="<?php echo base_url('assets/tealdark/images/logo/white-100@2x.png')?>" width="30" alt="">
+                      <img class="navbar-brand-icon" width="30" alt="">
                       <img src="<?php echo base_url('assets/tealdark/images/logo/white-100@2x.png')?>" class="navbar-brand-icon" width="30" alt="">
                         <span class="d-none d-md-block">Tell Me Basdat</span>
                     </a>
@@ -38,7 +38,7 @@
                     <!-- Main Navigation -->
 
                     <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
-                        <li class="d-none d-sm-flex nav-item">
+                        <li class="d-inline d-sm-flex nav-item">
                             <a href="<?php echo base_url('Login')?>" class="btn btn-accent">LOGIN</a>
                         </li>
                     </ul>
