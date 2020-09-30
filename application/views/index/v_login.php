@@ -24,18 +24,18 @@
                       <center> <h1 class="text-white mb-0">Sign In</h1> </center>
                       <center> <p class="lead measure-lead text-white-50">Account Management</p> </center>
                   </div>
-                    <form action="student-dashboard.html" class="col-md-5 p-0 mx-auto">
+                    <form method="post" action="<?php echo base_url('auth/cek_login');?>" class="col-md-5 p-0 mx-auto">
                         <div class="form-group">
-                            <label for="nim">NIM:</label>
-                            <input id="nim" type="text" class="form-control" placeholder="Your NIM ...">
+                            <label for="nim">Username:</label>
+                            <input type="text" class="form-control" name="tm_login_username" placeholder="Your Username ..." required autofocus>
                         </div>
                         <div class="form-group">
                             <label for="password">Password:</label>
-                            <input id="password" type="password" class="form-control" placeholder="Your password ...">
+                            <input type="password" class="form-control" name="tm_login_password" placeholder="Your Password ..." required>
                             <p class="text-right"><a href="<?php echo base_url('Lupa_password')?>" class="small">Forgot your password?</a></p>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-lg btn-accent">Login</button>
+                            <button class="btn btn-lg btn-accent" type="submit">Login</button>
                         </div>
                     </form>
                 </div>
