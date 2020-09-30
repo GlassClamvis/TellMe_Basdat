@@ -10,8 +10,7 @@ class Welcome extends CI_Controller {
 
 	public function index()
 	{
-		$this->template->home();
-		
+		$this->template->home('v_index');
 	}
 
 }

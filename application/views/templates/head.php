@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Home</title>
+    <title>Tellme Basdat</title>
 
     <!-- Prevent the demo from appearing in search engines -->
     <meta name="robots" content="noindex">
@@ -31,5 +31,9 @@
     <!-- App CSS -->
     <link type="text/css" href="<?php echo base_url('assets/tealdark/css/app.css')?>" rel="stylesheet">
     <link type="text/css" href="<?php echo base_url('assets/tealdark/css/app.rtl.css')?>" rel="stylesheet">
+
+
+
+
 
 </head>
