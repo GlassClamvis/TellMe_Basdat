@@ -1,11 +1,13 @@
 <?php $this->load->view("templates/head.php") ?>
 <?php $this->load->view("templates/header.php") ?>
-        <!-- Header Layout Content -->
-        <div class="mdk-header-layout__content page-content pb-0">
+<!-- Header Layout Content -->
+<div class="mdk-header-layout__content page-content pb-0">
 
-            <div class="bg-gradient-primary py-32pt">
-              <center><h2 class="text-white"><span class="d-block d-md-inline-block text-scramble js-text-scramble"></span></h2></center>
-                <!-- <div class="container d-flex flex-column flex-md-row align-items-center text-center text-md-left">
+    <div class="bg-gradient-primary py-32pt">
+        <center>
+            <h2 class="text-white"><span class="d-block d-md-inline-block text-scramble js-text-scramble"></span></h2>
+        </center>
+        <!-- <div class="container d-flex flex-column flex-md-row align-items-center text-center text-md-left">
                     <img src="assets/images/illustration/student/128/white.svg" class="mr-md-32pt mb-32pt mb-md-0" alt="student">
                     <div class="flex mb-32pt mb-md-0">
                         <h1 class="text-white mb-0">Sign In</h1>
@@ -16,35 +18,39 @@
                         <span class="btn__secondary-text">Sign up Today!</span>
                     </a>
                 </div> -->
+    </div>
+    <div class=" pt-32pt pt-sm-64pt pb-32pt">
+        <div class="container page__container">
+            <div class="flex mb-32pt mb-md-0">
+                <img src="<?php echo base_url('assets/tealdark/images/illustration/student/128/white.svg') ?>" class="mr-md-32pt mb-32pt mb-md-0" alt="student">
+                <center>
+                    <h1 class="text-white mb-0">Sign In</h1>
+                </center>
+                <center>
+                    <p class="lead measure-lead text-white-50">Account Management</p>
+                </center>
             </div>
-            <div class=" pt-32pt pt-sm-64pt pb-32pt">
-                <div class="container page__container">
-                  <div class="flex mb-32pt mb-md-0">
-                  <img src="<?php echo base_url('assets/tealdark/images/illustration/student/128/white.svg')?>" class="mr-md-32pt mb-32pt mb-md-0" alt="student">
-                      <center> <h1 class="text-white mb-0">Sign In</h1> </center>
-                      <center> <p class="lead measure-lead text-white-50">Account Management</p> </center>
-                  </div>
-                  <div class="text-center">
-                    <span style="color:red;font-style:italic;font-weight:bold;"><?php echo $this->session->flashdata('msg'); ?></span>
-                  </div>
-                    <form action="<?php echo base_url('Login/auth')?>" class="col-md-5 p-0 mx-auto" method="post">
-                        <div class="form-group">
-                            <label for="username">Username:</label>
-                            <input id="username" name="tm_login_username" type="text" class="form-control" placeholder="Your Username ...">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password:</label>
-                            <input id="password" type="password" name="tm_login_password" class="form-control" placeholder="Your password ...">
-                            <p class="text-right"><a href="<?php echo base_url('Lupa_password')?>" class="small">Forgot your password?</a></p>
-                        </div>
-                        <div class="text-center">
-                            <button class="btn btn-lg btn-accent">Login</button>
-                        </div>
-                    </form>
+            <div class="text-center">
+                <span style="color:red;font-style:italic;font-weight:bold;"><?php echo $this->session->flashdata('msg'); ?></span>
+            </div>
+            <form action="<?php echo base_url('Login/auth') ?>" class="col-md-5 p-0 mx-auto" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input id="username" name="tm_login_username" type="text" class="form-control" placeholder="Your Username ...">
                 </div>
-            </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" name="tm_login_password" class="form-control" placeholder="Your password ...">
+                    <p class="text-right"><a href="<?= base_url('auth/lupa_password') ?>" class="small">Forgot your password?</a></p>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-lg btn-accent">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-            <!-- <div class="page-separator m-0">
+    <!-- <div class="page-separator m-0">
                 <div class="page-separator__text">or sign-in with</div>
                 <div class="page-separator__bg-top "></div>
             </div>
@@ -56,8 +62,8 @@
                 </div>
             </div> -->
 
-        </div>
-        <!-- // END Header Layout Content -->
+</div>
+<!-- // END Header Layout Content -->
 
 <?php $this->load->view("templates/footer.php") ?>
 <?php $this->load->view("templates/js.php") ?>
