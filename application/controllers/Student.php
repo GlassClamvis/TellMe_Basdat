@@ -2,6 +2,8 @@
 class Student extends CI_Controller{
   function __construct(){
     parent::__construct();
+
+    $this->load->helper('url');
     //validasi jika user belum login
     if($this->session->userdata('masuk') != TRUE){
 			$url=base_url();
@@ -12,3 +14,5 @@ class Student extends CI_Controller{
   function index(){
     $this->load->view('content/v_student');
   }
+
+}

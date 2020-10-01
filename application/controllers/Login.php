@@ -13,24 +13,33 @@ class Login extends CI_Controller {
 	}
 
 	function auth(){
-        $username=htmlspecialchars($this->input->post('tm_login_username',TRUE),ENT_QUOTES);
-        $password=htmlspecialchars($this->input->post('tm_login_password',TRUE),ENT_QUOTES);
+      $username=htmlspecialchars($this->input->post('tm_login_username',TRUE),ENT_QUOTES);
+      $password=htmlspecialchars($this->input->post('tm_login_password',TRUE),ENT_QUOTES);
 
-        $cek_login=$this->m_login->auth_mahasiswa($username,$password);
+      $cek_login=$this->m_login->auth_user($username,$password);
 
-        if($cek_login->num_rows() > 0){ //jika login sebagai mahasiswa
-						$data=$cek_login->row_array();
-        		$this->session->set_userdata('masuk',TRUE);
-		         if($data['tm_user_access_id']=='2'){
-		            $this->session->set_userdata('id',$data['tm_login_id']);
-		            redirect('student');
-        }else{  // jika username dan password tidak ditemukan atau salah
-							$url=base_url();
-							echo $this->session->set_flashdata('msg','Username Atau Password Salah');
-							redirect($url);
+      if($cek_login->num_rows() > 0){ //jika login sebagai mahasiswa
+					$data=$cek_login->row_array();
+        	$this->session->set_userdata('masuk',TRUE);
+					if($data['tm_user_access_id']=='1'){
+		      	$this->session->set_userdata('id',$data['tm_login_id']);
+						$this->session->set_userdata('username',$data['tm_login_username']);
+						$this->session->set_userdata('user_id',$data['tm_user_access_id']);
+		      	redirect('teacher');
+
+					}else{
+		      	$this->session->set_userdata('id',$data['tm_login_id']);
+						$this->session->set_userdata('username',$data['tm_login_username']);
+						$this->session->set_userdata('user_id',$data['tm_user_access_id']);
+		      	redirect('student');
 					}
-    	 }
-		}
+
+			}else{  // jika username dan password tidak ditemukan atau salah
+					$url=base_url('login');
+				  echo $this->session->set_flashdata('msg','Username Atau Password Salah');
+					redirect($url);
+		  }
+}
 
     function logout(){
         $this->session->sess_destroy();
@@ -38,3 +47,28 @@ class Login extends CI_Controller {
         redirect($url);
     }
 }
+
+// function auth(){
+//   echo "CAPTAIN HERE";
+//       $username=htmlspecialchars($this->input->post('tm_login_username',TRUE),ENT_QUOTES);
+//       $password=htmlspecialchars($this->input->post('tm_login_password',TRUE),ENT_QUOTES);
+//       echo $username."-".$password;
+//       $cek_login=$this->m_login->auth_mahasiswa($username,$password);
+//       ECHO COUNT($cek_login);
+//       if(count($cek_login)){ //jika login sebagai mahasiswa
+//         echo "data mahasiswa ditemukan";
+//           $data=$cek_login->row_array();
+//           $this->session->set_userdata('masuk',TRUE);
+//           if($data['tm_user_access_id']=='2'){
+//               $this->session->set_userdata('id',$data['tm_login_id']);
+//               redirect('student');
+//           }else{  // jika username dan password tidak ditemukan atau salah
+//
+//             $url=base_url();
+//             echo $this->session->set_flashdata('msg','Username Atau Password Salah');
+//             redirect($url);
+//           }
+//
+//       }
+//       echo "data tidak ditemukan atau bukan mahasiswa";
+//   }

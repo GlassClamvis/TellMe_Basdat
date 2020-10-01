@@ -1,5 +1,5 @@
-<?php $this->load->view("templates/head.php")?>
-<?php $this->load->view("templates/header.php")?>
+<?php $this->load->view("templates/head.php") ?>
+<?php $this->load->view("templates/header.php") ?>
         <!-- Header Layout Content -->
         <div class="mdk-header-layout__content page-content pb-0">
 
@@ -24,18 +24,21 @@
                       <center> <h1 class="text-white mb-0">Sign In</h1> </center>
                       <center> <p class="lead measure-lead text-white-50">Account Management</p> </center>
                   </div>
-                    <form method="post" action="<?php echo base_url('auth/cek_login');?>" class="col-md-5 p-0 mx-auto">
+                  <div class="text-center">
+                    <span style="color:red;font-style:italic;font-weight:bold;"><?php echo $this->session->flashdata('msg'); ?></span>
+                  </div>
+                    <form action="<?php echo base_url('Login/auth')?>" class="col-md-5 p-0 mx-auto" method="post">
                         <div class="form-group">
-                            <label for="nim">Username:</label>
-                            <input type="text" class="form-control" name="tm_login_username" placeholder="Your Username ..." required autofocus>
+                            <label for="username">Username:</label>
+                            <input id="username" name="tm_login_username" type="text" class="form-control" placeholder="Your Username ...">
                         </div>
                         <div class="form-group">
                             <label for="password">Password:</label>
-                            <input type="password" class="form-control" name="tm_login_password" placeholder="Your Password ..." required>
+                            <input id="password" type="password" name="tm_login_password" class="form-control" placeholder="Your password ...">
                             <p class="text-right"><a href="<?php echo base_url('Lupa_password')?>" class="small">Forgot your password?</a></p>
                         </div>
                         <div class="text-center">
-                            <button class="btn btn-lg btn-accent" type="submit">Login</button>
+                            <button class="btn btn-lg btn-accent">Login</button>
                         </div>
                     </form>
                 </div>
@@ -55,7 +58,6 @@
 
         </div>
         <!-- // END Header Layout Content -->
-<?php $this->load->view("templates/footer.php") ?>
-<?php $this->load->view("templates/theme.php") ?>
-<?php $this->load->view("templates/js.php") ?>
 
+<?php $this->load->view("templates/footer.php") ?>
+<?php $this->load->view("templates/js.php") ?>
