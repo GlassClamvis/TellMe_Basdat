@@ -10,7 +10,7 @@ class Template {
       $data['footer'] = $this->_ci->load->view('templates/footer', $data, TRUE);
       $data['theme'] = $this->_ci->load->view('templates/theme', $data, TRUE);
       $data['js'] = $this->_ci->load->view('templates/js', $data, TRUE);
-      $this->_ci->load->view('content/v_index', $data);
+      $this->_ci->load->view('index/v_index', $data);
   }
 
   function login($template = NULL, $data = NULL) {
@@ -19,7 +19,7 @@ class Template {
       $data['footer'] = $this->_ci->load->view('templates/footer', $data, TRUE);
       $data['theme'] = $this->_ci->load->view('templates/theme', $data, TRUE);
       $data['js'] = $this->_ci->load->view('templates/js', $data, TRUE);
-      $this->_ci->load->view('content/v_login', $data);
+      $this->_ci->load->view('index/v_login', $data);
   }
 
   function Lupa_password($template = NULL, $data = NULL) {
@@ -28,7 +28,7 @@ class Template {
       $data['footer'] = $this->_ci->load->view('templates/footer', $data, TRUE);
       $data['theme'] = $this->_ci->load->view('templates/theme', $data, TRUE);
       $data['js'] = $this->_ci->load->view('templates/js', $data, TRUE);
-      $this->_ci->load->view('content/v_lupa_password', $data);
+      $this->_ci->load->view('index/v_lupa_password', $data);
   }
 }
  ?>

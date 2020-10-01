@@ -1,5 +1,6 @@
-<?php $this->load->view("templates/head.php")?>
-<?php $this->load->view("templates/header.php")?>
+<?php $this->load->view("templates/head.php") ?>
+<?php $this->load->view("templates/header.php") ?>
+
         <!-- Header Layout Content -->
         <div class="mdk-header-layout__content page-content ">
             <div class="mdk-box mdk-box--bg-gradient-primary bg-dark js-mdk-box position-relative overflow-hidden mb-0" data-effects="parallax-background blend-background">
@@ -1088,7 +1089,6 @@
 
         </div>
         <!-- // END Header Layout Content -->
-<?php $this->load->view("templates/footer.php") ?>
-<?php $this->load->view("templates/theme.php") ?>
-<?php $this->load->view("templates/js.php") ?>
 
+<?php $this->load->view("templates/footer.php") ?>
+<?php $this->load->view("templates/js.php") ?>
