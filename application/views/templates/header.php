@@ -24,7 +24,7 @@
                     <!-- Navbar Brand -->
                     <a href="<?php echo base_url('Welcome')?>" class="navbar-brand">
                       <img class="navbar-brand-icon" width="30" alt="">
-                      <img src="<?php echo base_url('assets/tealdark/images/logo/white-100@2x.png')?>" class="navbar-brand-icon" width="30" alt="">
+                      <img src="<?php echo base_url('assets/tealdark/images/logo/putih.png')?>" class="navbar-brand-icon" width="60" alt="">
                         <span class="d-none d-md-block">Tell Me Basdat</span>
                     </a>
 

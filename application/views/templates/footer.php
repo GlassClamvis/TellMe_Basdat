@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-4 text-md-right">
                 <p class="text-70 brand justify-content-md-end">
-                    <img class="brand-icon" src="<?php echo base_url('assets/tealdark/images/logo/white-100@2x.png')?>" width="30" alt="Tutorio"> Tell Me Basdat
+                    <img class="brand-icon" src="<?php echo base_url('assets/tealdark/images/logo/putih.png')?>" width="50" alt="Tutorio"> Tell Me Basdat
                 </p>
                 <p class="text-muted mb-0 mb-lg-16pt">Tell Me Basdat adalah Website Learning Tutorial Untuk Matakuliah Database.</p>
             </div>
@@ -188,9 +188,8 @@
         <div class="sidebar-p-a sidebar-b-b sidebar-m-b pt-0">
 
             <!-- Brand -->
-            <a href="index.html" class="sidebar-brand">
-                <img class="sidebar-brand-icon" src="<?php echo base_url('assets/tealdark/images/logo/white-100.svg')?>" width="30" alt="">
-                <span>Tell Me</span>
+            <a href="<?php echo base_url('login') ?>" class="sidebar-brand">
+                <span>TellMe Basdat</span>
             </a>
             <!-- // END Brand -->
 

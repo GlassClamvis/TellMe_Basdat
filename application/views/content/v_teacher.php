@@ -11,26 +11,26 @@
     <meta name="robots" content="noindex">
 
     <!-- Perfect Scrollbar -->
-    <link type="text/css" href="assets/vendor/perfect-scrollbar.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/vendor/perfect-scrollbar.css')  ?>" rel="stylesheet">
 
     <!-- Fix Footer CSS -->
-    <link type="text/css" href="assets/vendor/fix-footer.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/vendor/fix-footer.css')?>" rel="stylesheet">
 
     <!-- Material Design Icons -->
-    <link type="text/css" href="assets/css/material-icons.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/material-icons.rtl.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/material-icons.css')?>" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/material-icons.rtl.css')?>" rel="stylesheet">
 
     <!-- Font Awesome Icons -->
-    <link type="text/css" href="assets/css/fontawesome.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/fontawesome.rtl.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/fontawesome.css')?>" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/fontawesome.rtl.css')?>" rel="stylesheet">
 
     <!-- Preloader -->
-    <link type="text/css" href="assets/css/preloader.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/preloader.rtl.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/preloader.css')?>" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/preloader.rtl.css')?>" rel="stylesheet">
 
     <!-- App CSS -->
-    <link type="text/css" href="assets/css/app.css" rel="stylesheet">
-    <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/app.css')?>" rel="stylesheet">
+    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/app.rtl.css')?>" rel="stylesheet">
 
 
 
@@ -1643,57 +1643,52 @@
     </div>
 
     <!-- jQuery -->
-    <script src="assets/vendor/jquery.min.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/jquery.min.js')?>"></script>
 
     <!-- Bootstrap -->
-    <script src="assets/vendor/popper.min.js"></script>
-    <script src="assets/vendor/bootstrap.min.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/popper.min.js')?>"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/bootstrap.min.js')?>"></script>
 
     <!-- Perfect Scrollbar -->
-    <script src="assets/vendor/perfect-scrollbar.min.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/perfect-scrollbar.min.js')?>"></script>
 
     <!-- DOM Factory -->
-    <script src="assets/vendor/dom-factory.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/dom-factory.js')?>"></script>
 
     <!-- MDK -->
-    <script src="assets/vendor/material-design-kit.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/material-design-kit.js')?>"></script>
 
     <!-- Fix Footer -->
-    <script src="assets/vendor/fix-footer.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/fix-footer.js')?>"></script>
 
     <!-- Chart.js -->
-    <script src="assets/vendor/Chart.min.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/Chart.min.js')?>"></script>
 
     <!-- App JS -->
-    <script src="assets/js/app.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/js/app.js')?>"></script>
 
     <!-- Highlight.js -->
-    <script src="assets/js/hljs.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/js/hljs.js')?>"></script>
 
     <!-- App Settings (safe to remove) -->
-    <script src="assets/js/app-settings.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/js/app-settings.js')?>"></script>
 
 
     <!-- Global Settings -->
-    <script src="assets/js/settings.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/js/settings.js')?>"></script>
 
     <!-- Moment.js -->
-    <script src="assets/vendor/moment.min.js"></script>
-    <script src="assets/vendor/moment-range.min.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/moment.min.js')?>"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/moment-range.min.js')?>"></script>
 
     <!-- Chart.js -->
-    <script src="assets/vendor/Chart.min.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/vendor/Chart.min.js')?>"></script>
 
-    <!-- UI Charts Page JS -->
-    <script src="assets/js/chartjs-rounded-bar.js"></script>
-    <script src="assets/js/chartjs.js"></script>
+    <!-- Charts JS -->
+    <script src="<?php echo base_url ('assets/tealdark/js/chartjs.js')?>"></script>
 
     <!-- Chart.js Samples -->
-    <script src="assets/js/page.instructor-dashboard.js"></script>
-
-    <!-- List.js -->
-    <script src="assets/vendor/list.min.js"></script>
-    <script src="assets/js/list.js"></script>
+    <script src="<?php echo base_url ('assets/tealdark/js/page.student-dashboard.js')?>"></script>
 
 </body>
 
