@@ -14,18 +14,16 @@
     </div>
     <div class="page-section ">
         <div class="container page__container">
-            <form action="<?= base_url('auth/ubahPassword'); ?>" class="col-sm-5 mx-auto">
+            <form class="user" method="post" action="<?= base_url('auth/ubahPassword'); ?>" class="col-sm-5 mx-auto">
                 <div class="form-group">
                     <label for="password1">Password Baru :</label>
                     <input id="password1" type="password" class="form-control" name="password1" placeholder="Masukkan password baru anda ...">
-                    <?= form_error('password1', '<small 
-                    class="text-danger pl-3">', '</small>'); ?>
+                    <?= form_error('password1', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
                 <div class="form-group">
                     <label for="password2">Konfirmasi Password Baru:</label>
                     <input id="password2" type="password" class="form-control" name="password2" placeholder="Konfirmasi password baru anda ...">
-                    <?= form_error('password2', '<small 
-                    class="text-danger pl-3">', '</small>'); ?>
+                    <?= form_error('password2', '<small class="text-danger pl-3">', '</small>'); ?>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="btn btn-accent btn-lg">Reset Password</button>

@@ -25,22 +25,29 @@ class Auth extends CI_Controller
             // $data['title'] = 'Lupa Password';
             $this->load->view('content/v_lupa_password');
         } else {
+            $nim = $this->input->post('nim');
             $email = $this->input->post('email');
+            $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
             $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_email' => $email])->row_array();
 
             if ($user) {
                 $token = base64_encode(random_bytes(32));
+                $user_token = [
+                    'email' => $email,
+                    'token' => $token
+                ];
+
+                // $this->db->insert('tm_forgot_password', $user_token);
             } else {
                 $this->session->set_flashdata('message', '<div class="alert 
-            alert-danger" role="alert">Email tidak terdaftar!</div>');
+            alert-danger" role="alert">NIM atau Email tidak terdaftar!</div>');
                 redirect('auth/lupa_password');
             }
             // token yg dikirim ke email
             $token = base64_encode(random_bytes(32));
-            $tm_forgot_password = [
+            $user_token = [
                 'email' => $email,
-                'token' => $token,
-                'date_created' => time()
+                'token' => $token
             ];
 
             $this->_sendEmail();
@@ -68,7 +75,7 @@ class Auth extends CI_Controller
         $this->email->initialize($config);
 
 
-        $this->email->from('cobaemail.tellme@gmail.com', 'TellMe Basdat');
+        $this->email->from('noreply@gmail.com', 'Tellme Basdat');
         $this->email->to($this->input->post('email'));
         $this->email->subject('Reset Password');
         $this->email->message('Klik disini untuk ganti password : <a
@@ -84,9 +91,11 @@ class Auth extends CI_Controller
 
     public function resetPassword()
     {
+        $nim = $this->input->get('nim');
         $email = $this->input->get('email');
         // $token = $this->input->get('token')
 
+        // $user = $this->db->get_where('tm_login', ['tm_login_username' => $nim])->row_array();
         $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_email' => $email])->row_array();
 
         if ($user) {
@@ -100,22 +109,20 @@ class Auth extends CI_Controller
 
     public function ubahPassword()
     {
-        $this->form_validation->set_rules('password1', 'Password', 'trim|required|
-        min_legth[8]|matches[password2]');
-        $this->form_validation->set_rules('password2', 'Repeat Password', 'trim|
-        required|min_length[8]|matches[password1]');
+
+        $this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[6]|matches[password2]');
+        $this->form_validation->set_rules('password2', 'Repeat Password', 'trim|required|min_length[6]|matches[password1]');
 
         if ($this->form_validation->run() == false) {
             // $data['title'] = 'Reset Password';
             $this->load->view('content/v_ubah_password');
         } else {
-            $password = password_hash(
-                $this->input->post('password1'),
-                PASSWORD_DEFAULT
-            );
+            $password = $this->input->post('password1');
             $email = $this->session->userdata('reset_email');
+            $nim = $this->input->get('nim');
 
             $this->db->set('tm_login_password', $password);
+            // $this->db->where('tm_login_username', $nim);
             $this->db->update('tm_login');
 
             $this->session->set_flashdata('message', '<div class="alert 
