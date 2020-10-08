@@ -1,78 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Dashboard</title>
-
-    <!-- Prevent the demo from appearing in search engines -->
-    <meta name="robots" content="noindex">
-
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/vendor/perfect-scrollbar.css')  ?>" rel="stylesheet">
-
-    <!-- Fix Footer CSS -->
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/vendor/fix-footer.css')?>" rel="stylesheet">
-
-    <!-- Material Design Icons -->
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/material-icons.css')?>" rel="stylesheet">
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/material-icons.rtl.css')?>" rel="stylesheet">
-
-    <!-- Font Awesome Icons -->
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/fontawesome.css')?>" rel="stylesheet">
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/fontawesome.rtl.css')?>" rel="stylesheet">
-
-    <!-- Preloader -->
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/preloader.css')?>" rel="stylesheet">
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/preloader.rtl.css')?>" rel="stylesheet">
-
-    <!-- App CSS -->
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/app.css')?>" rel="stylesheet">
-    <link type="text/css" href="<?php echo base_url ('assets/tealdark/css/app.rtl.css')?>" rel="stylesheet">
-
-
-
-
-
-</head>
+<?php $this->load->view("templates/head.php") ?>
 
 <body class="layout-navbar-mini-fixed-bottom">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <div class="preloader">
         <div class="sk-double-bounce">
@@ -98,11 +26,11 @@
 
                     <!-- Navbar Brand -->
                     <a href="index.html" class="navbar-brand">
-                        <img class="navbar-brand-icon mr-0 mr-md-8pt" src="<?php echo base_url ('assets/tealdark/images/logo/white-100@2x.png')?>" width="30" alt="">
-                        <span  src="<?php echo base_url ('assets/tealdark/images/logo/white-100@2x.png')?>" class="d-none d-md-block">Tutorio</span>
+                        <img class="navbar-brand-icon mr-0 mr-md-8pt" src="<?php echo base_url ('assets/tealdark/images/logo/putih.png')?>" width="60" alt="TellMe Basdat">
+                        <span class="d-none d-md-block">TellMe Basdat</span>
                     </a>
 
-                    <button class="btn btn-black mr-16pt" data-toggle="modal" data-target="#courses">Courses <i class="material-icons">arrow_drop_down</i></button>
+                    <!-- <button class="btn btn-black mr-16pt" data-toggle="modal" data-target="#courses">Courses <i class="material-icons">arrow_drop_down</i></button> -->
 
                     <form class="search-form search-form--black search-form-courses d-none d-md-flex" action="library-filters.html">
                         <input type="text" class="form-control" placeholder="What would you like to learn?">
@@ -127,8 +55,8 @@
                                 <div class="dropdown-divider"></div>
                                 <div class="dropdown-header"><strong>Account</strong></div>
                                 <a class="dropdown-item" href="student-edit-account.html">Edit Account</a>
-                                <a class="dropdown-item" href="student-billing.html">Billing</a>
-                                <a class="dropdown-item" href="student-billing-history.html">Payments</a>
+                                <!-- <a class="dropdown-item" href="student-billing.html">Billing</a>
+                                <a class="dropdown-item" href="student-billing-history.html">Payments</a> -->
                                 <a class="dropdown-item" href="<?php echo base_url('login/logout')?>">Logout</a>
 
 
@@ -167,24 +95,6 @@
                                             </span>
                                         </a>
 
-                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action unread">
-                                            <span class="d-flex align-items-center mb-1">
-                                                <small class="text-black-50">5 minutes ago</small>
-
-                                                <span class="ml-auto unread-indicator bg-accent"></span>
-
-                                            </span>
-                                            <span class="d-flex">
-                                                <span class="avatar avatar-xs mr-2">
-                                                    <img src="assets/images/people/110/woman-5.jpg" alt="people" class="avatar-img rounded-circle">
-                                                </span>
-                                                <span class="flex d-flex flex-column">
-                                                    <strong>Michelle</strong>
-                                                    <span class="text-black-70">🔥 Superb job..</span>
-                                                </span>
-                                            </span>
-                                        </a>
-
                                     </div>
 
                                     <div class="dropdown-header"><strong>System notifications</strong></div>
@@ -208,7 +118,7 @@
                                             </span>
                                         </a>
 
-                                        <a href="javascript:void(0);" class="list-group-item list-group-item-action">
+                                        <!-- <a href="javascript:void(0);" class="list-group-item list-group-item-action">
                                             <span class="d-flex align-items-center mb-1">
                                                 <small class="text-black-50">5 hours ago</small>
 
@@ -242,12 +152,12 @@
                                                     <span class="text-black-70">Your deploy was successful.</span>
                                                 </span>
                                             </span>
-                                        </a>
+                                        </a> -->
 
                                     </div>
                                 </div>
                             </div>
-                        </li>
+                        </  li>
                         <!-- // END Notifications dropdown -->
                     </nav>
 
@@ -267,10 +177,10 @@
                 <div class="container d-flex flex-column flex-md-row align-items-center text-center text-md-left">
                     <img src="<?php echo base_url ('assets/tealdark/images/illustration/student/128/white.svg')?>" width="104" class="mr-md-32pt mb-32pt mb-md-0" alt="student">
                     <div class="flex mb-32pt mb-md-0">
-                        <h2 class="text-white mb-0">Alexander Watson</h2>
-                        <p class="lead text-white-50 d-flex align-items-center">Student <span class="ml-16pt d-flex align-items-center"><i class="material-icons icon-16pt mr-4pt">opacity</i> 2,300 IQ</span></p>
+                        <h2 class="text-white mb-0"><?php echo $_SESSION['nama_mahasiswa']; ?></h2>
+                        <p class="lead text-white-50 d-flex align-items-center">NIM<span class="ml-16pt d-flex align-items-center"><i class="material-icons icon-16pt mr-4pt">opacity</i> <?php echo $_SESSION['nim_mahasiswa']; ?></span></p>
                     </div>
-                    <a href="student-edit-account.html" class="btn btn-outline-white">Edit account</a>
+                    <a class="btn btn-outline-white" data-toggle="modal" data-target="#profil">Profil</a>
                 </div>
             </div>
 
@@ -297,11 +207,11 @@
                                 </li>
 
                             </ul>
-                            <ul class="nav navbar-nav ml-auto">
+                            <!-- <ul class="nav navbar-nav ml-auto">
                                 <li class="nav-item">
                                     <a href="student-profile.html" class="nav-link">Profile</a>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                 </div>
@@ -335,9 +245,9 @@
                                 <div class="media-body" style="min-width: 180px">
                                     Your subscription ends on <strong>25 February 2015</strong>
                                 </div>
-                                <div class="media-right mt-2 mt-sm-0">
+                                <!-- <div class="media-right mt-2 mt-sm-0">
                                     <a class="btn btn-link text-secondary" href="student-billing.html">Upgrade</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -347,16 +257,16 @@
 
                             <div class="card">
                                 <div class="card-header d-flex align-items-center">
-                                    <div class="h2 mb-0 mr-3 text-accent">116</div>
+                                    <div class="h2 mb-0 mr-3 text-accent">            </div>
                                     <div class="flex">
-                                        <p class="mb-0"><strong>Angular</strong></p>
-                                        <p class="text-50 mb-0 mt-n1">Best score</p>
+                                        <p class="mb-0"><strong>          </strong></p>
+                                        <p class="text-50 mb-0 mt-n1">      </p>
                                     </div>
                                     <div class="dropdown">
-                                        <a href="#" class="dropdown-toggle text-70" data-toggle="dropdown">Popular Topics</a>
+                                        <a href="#" class="dropdown-toggle text-70" data-toggle="dropdown">       </a>
                                         <div class="dropdown-menu dropdown-menu-right">
-                                            <a href="" class="dropdown-item">Popular Topics</a>
-                                            <a href="" class="dropdown-item">Web Design</a>
+                                            <a href="" class="dropdown-item">          </a>
+                                            <a href="" class="dropdown-item">          </a>
                                         </div>
                                     </div>
                                 </div>
@@ -372,12 +282,12 @@
 
                             <div class="card">
                                 <div class="card-header d-flex align-items-center border-0">
-                                    <div class="h2 mb-0 mr-3 text-accent">432</div>
+                                    <div class="h2 mb-0 mr-3 text-accent">       </div>
                                     <div class="flex">
-                                        <p class="mb-0"><strong>Experience IQ</strong></p>
-                                        <p class="text-50 mb-0 mt-n1">4 days streak this week</p>
+                                        <p class="mb-0"><strong>               </strong></p>
+                                        <p class="text-50 mb-0 mt-n1">              </p>
                                     </div>
-                                    <i class="material-icons text-muted ml-2">trending_up</i>
+                                    <i class="material-icons text-muted ml-2">                   </i>
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="chart" style="height: 128px;">
@@ -403,8 +313,8 @@
                                             <span class="card-body fullbleed">
                                                 <span class="row">
                                                     <span class="col-5 text-center">
-                                                        <span class="h5 text-white text-uppercase font-weight-normal m-0 d-block">Achievement</span>
-                                                        <span class="text-white-60 d-block mb-16pt">Jun 5, 2018</span>
+                                                        <span class="h5 text-white text-uppercase font-weight-normal m-0 d-block">               </span>
+                                                        <span class="text-white-60 d-block mb-16pt">                   </span>
                                                         <img src="<?php echo base_url ('assets/tealdark/images/illustration/achievement/128/white.png')?>" alt="achievement">
                                                     </span>
                                                     <span class="col-7 d-flex flex-column">
@@ -412,8 +322,8 @@
                                                             <img src="<?php echo base_url ('assets/tealdark/images/paths/flinto_40x40@2x.png')?>" width="64" alt="Flinto" class="rounded">
                                                         </span>
                                                         <span>
-                                                            <span class="h4 text-white m-0 d-block">Flinto</span>
-                                                            <span class="text-white-60">Introduction to The App Design Application</span>
+                                                            <span class="h4 text-white m-0 d-block">                     </span>
+                                                            <span class="text-white-60">                      </span>
                                                         </span>
                                                     </span>
                                                 </span>
@@ -430,8 +340,8 @@
                                             <span class="card-body fullbleed">
                                                 <span class="row">
                                                     <span class="col-5 text-center">
-                                                        <span class="h5 text-white text-uppercase font-weight-normal m-0 d-block">Achievement</span>
-                                                        <span class="text-white-60 d-block mb-16pt">Jun 5, 2018</span>
+                                                        <span class="h5 text-white text-uppercase font-weight-normal m-0 d-block">                   </span>
+                                                        <span class="text-white-60 d-block mb-16pt">                  </span>
                                                         <img src="<?php echo base_url ('assets/tealdark/images/illustration/achievement/128/white.png')?>" alt="achievement">
                                                     </span>
                                                     <span class="col-7 d-flex flex-column">
@@ -439,8 +349,8 @@
                                                             <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="64" alt="Angular fundamentals" class="rounded">
                                                         </span>
                                                         <span>
-                                                            <span class="h4 text-white m-0 d-block">Angular fundamentals</span>
-                                                            <span class="text-white-60">Creating and Communicating Between Angular Components</span>
+                                                            <span class="h4 text-white m-0 d-block">                </span>
+                                                            <span class="text-white-60">                             </span>
                                                         </span>
                                                     </span>
                                                 </span>
@@ -467,8 +377,8 @@
                     <div class="row mb-lg-8pt">
                         <div class="col-lg-6 mb-8pt mb-sm-0">
                             <div class="page-heading">
-                                <h4>Learning Paths</h4>
-                                <a href="student-my-courses.html" class="text-underline ml-sm-auto">My learning paths</a>
+                                <h4>        </h4>
+                                <a href="student-my-courses.html" class="text-underline ml-sm-auto">        </a>
                             </div>
 
 
@@ -490,12 +400,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title text-body mb-0">Angular</div>
-                                                    <div class="text-muted d-flex lh-1">24 courses</div>
+                                                    <div class="card-title text-body mb-0">       </div>
+                                                    <div class="text-muted d-flex lh-1">        </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="path.html" class="ml-4pt btn btn-link text-secondary">Resume</a>
+                                        <a href="path.html" class="ml-4pt btn btn-link text-secondary">       </a>
                                     </div>
                                 </div>
                             </div>
@@ -505,38 +415,38 @@
                                         <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
-                                        <div class="card-title mb-0">Angular</div>
-                                        <span class="text-black-50 d-flex lh-1">18 courses</span>
+                                        <div class="card-title mb-0">  </div>
+                                        <span class="text-black-50 d-flex lh-1">   </span>
                                     </div>
                                 </div>
 
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center mb-8pt justify-content-center">
                                         <div class="d-flex align-items-center mr-8pt">
-                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">     </span>
+                                            <p class="flex text-black-50 lh-1 mb-0"><small>        </small></p>
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">            </span>
+                                            <p class="flex text-black-50 lh-1 mb-0"><small>           </small></p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="path.html" class="btn btn-primary mr-8pt">Resume</a>
-                                        <a href="path.html" class="btn btn-outline-secondary ml-0">Start over</a>
+                                        <a href="path.html" class="btn btn-primary mr-8pt">                 </a>
+                                        <a href="path.html" class="btn btn-outline-secondary ml-0">      </a>
                                     </div>
                                 </div>
 
                                 <div class="d-flex align-items-center">
-                                    <small class="text-black-50 mr-8pt">Your rating</small>
+                                    <small class="text-black-50 mr-8pt">          </small>
                                     <div class="rating mr-8pt">
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">      </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">      </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">      </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">      </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">      </span></span>
                                     </div>
-                                    <small class="text-black-50">4/5</small>
+                                    <small class="text-black-50">    </small>
                                 </div>
                             </div>
 
@@ -557,12 +467,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title text-body mb-0">Swift</div>
-                                                    <div class="text-muted d-flex lh-1">24 courses</div>
+                                                    <div class="card-title text-body mb-0">   </div>
+                                                    <div class="text-muted d-flex lh-1">  </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="path.html" class="ml-4pt btn btn-link text-secondary border-1 border-secondary">Resume</a>
+                                        <a href="path.html" class="ml-4pt btn btn-link text-secondary border-1 border-secondary">  </a>
                                     </div>
                                 </div>
                             </div>
@@ -572,38 +482,38 @@
                                         <img src="<?php echo base_url ('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
-                                        <div class="card-title mb-0">Swift</div>
-                                        <span class="text-black-50 d-flex lh-1">18 courses</span>
+                                        <div class="card-title mb-0">  </div>
+                                        <span class="text-black-50 d-flex lh-1">  </span>
                                     </div>
                                 </div>
 
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center mb-8pt justify-content-center">
                                         <div class="d-flex align-items-center mr-8pt">
-                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">  </span>
+                                            <p class="flex text-black-50 lh-1 mb-0"><small>  </small></p>
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">  </span>
+                                            <p class="flex text-black-50 lh-1 mb-0"><small>  </small></p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="path.html" class="btn btn-primary mr-8pt">Resume</a>
-                                        <a href="path.html" class="btn btn-outline-secondary ml-0">Start over</a>
+                                        <a href="path.html" class="btn btn-primary mr-8pt">  </a>
+                                        <a href="path.html" class="btn btn-outline-secondary ml-0">  </a>
                                     </div>
                                 </div>
 
                                 <div class="d-flex align-items-center">
-                                    <small class="text-black-50 mr-8pt">Your rating</small>
+                                    <small class="text-black-50 mr-8pt">  </small>
                                     <div class="rating mr-8pt">
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
                                     </div>
-                                    <small class="text-black-50">4/5</small>
+                                    <small class="text-black-50">  </small>
                                 </div>
                             </div>
 
@@ -624,12 +534,12 @@
                                                     </div>
                                                 </div>
                                                 <div class="flex">
-                                                    <div class="card-title text-body mb-0">React Native</div>
-                                                    <div class="text-muted d-flex lh-1">24 courses</div>
+                                                    <div class="card-title text-body mb-0">  </div>
+                                                    <div class="text-muted d-flex lh-1">  </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="path.html" class="ml-4pt btn btn-link text-secondary">Resume</a>
+                                        <a href="path.html" class="ml-4pt btn btn-link text-secondary">  </a>
                                     </div>
                                 </div>
                             </div>
@@ -639,46 +549,46 @@
                                         <img src="<?php echo base_url ('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                     </div>
                                     <div class="media-body">
-                                        <div class="card-title mb-0">React Native</div>
-                                        <span class="text-black-50 d-flex lh-1">18 courses</span>
+                                        <div class="card-title mb-0">  </div>
+                                        <span class="text-black-50 d-flex lh-1">  </span>
                                     </div>
                                 </div>
 
                                 <div class="my-32pt">
                                     <div class="d-flex align-items-center mb-8pt justify-content-center">
                                         <div class="d-flex align-items-center mr-8pt">
-                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">  </span>
+                                            <p class="flex text-black-50 lh-1 mb-0"><small>  </small></p>
                                         </div>
                                         <div class="d-flex align-items-center">
-                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">  </span>
+                                            <p class="flex text-black-50 lh-1 mb-0"><small>  </small></p>
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a href="path.html" class="btn btn-primary mr-8pt">Resume</a>
-                                        <a href="path.html" class="btn btn-outline-secondary ml-0">Start over</a>
+                                        <a href="path.html" class="btn btn-primary mr-8pt">  </a>
+                                        <a href="path.html" class="btn btn-outline-secondary ml-0">  </a>
                                     </div>
                                 </div>
 
                                 <div class="d-flex align-items-center">
-                                    <small class="text-black-50 mr-8pt">Your rating</small>
+                                    <small class="text-black-50 mr-8pt">  </small>
                                     <div class="rating mr-8pt">
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
+                                        <span class="rating__item"><span class="material-icons text-primary">  </span></span>
                                     </div>
-                                    <small class="text-black-50">4/5</small>
+                                    <small class="text-black-50">  </small>
                                 </div>
                             </div>
 
                         </div>
                         <div class="col-lg-6">
                             <div class="page-heading">
-                                <h4>Courses</h4>
-                                <a href="student-my-courses.html" class="text-underline ml-sm-auto">My courses</a>
+                                <h4>  </h4>
+                                <a href="student-my-courses.html" class="text-underline ml-sm-auto">  </a>
                             </div>
 
 
@@ -687,8 +597,8 @@
                                 <div class="js-mdk-carousel row d-block" id="carousel-courses1">
 
                                     <a class="carousel-control-next js-mdk-carousel-control mt-n24pt" href="#carousel-courses1" role="button" data-slide="next">
-                                        <span class="carousel-control-icon material-icons" aria-hidden="true">keyboard_arrow_right</span>
-                                        <span class="sr-only">Next</span>
+                                        <span class="carousel-control-icon material-icons" aria-hidden="true">  </span>
+                                        <span class="sr-only">  </span>
                                     </a>
 
                                     <div class="mdk-carousel__content">
@@ -704,8 +614,8 @@
                                                     <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_430x168.png')?>" alt="course">
                                                     <span class="overlay__content">
                                                         <span class="overlay__action d-flex flex-column text-center">
-                                                            <i class="material-icons">play_circle_outline</i>
-                                                            <small>Resume course</small>
+                                                            <i class="material-icons">  </i>
+                                                            <small>  </small>
                                                         </span>
                                                     </span>
                                                 </a>
@@ -714,20 +624,20 @@
                                                     <div class="card-body">
                                                         <div class="d-flex">
                                                             <div class="flex">
-                                                                <a class="card-title" href="student-take-course.html">Learn Angular fundamentals</a>
-                                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                                <a class="card-title" href="student-take-course.html">  </a>
+                                                                <small class="text-50 font-weight-bold mb-4pt">  </small>
                                                             </div>
-                                                            <a href="student-take-course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                            <a href="student-take-course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">  </a>
                                                         </div>
                                                         <div class="d-flex">
                                                             <div class="rating flex">
-                                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                <span class="rating__item"><span class="material-icons">  </span></span>
+                                                                <span class="rating__item"><span class="material-icons">  </span></span>
+                                                                <span class="rating__item"><span class="material-icons">  </span></span>
+                                                                <span class="rating__item"><span class="material-icons">  </span></span>
+                                                                <span class="rating__item"><span class="material-icons">  </span></span>
                                                             </div>
-                                                            <small class="text-50">6 hours</small>
+                                                            <small class="text-50">  </small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -738,10 +648,10 @@
                                                         <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                                     </div>
                                                     <div class="media-body">
-                                                        <div class="card-title mb-0">Learn Angular fundamentals</div>
+                                                        <div class="card-title mb-0">  </div>
                                                         <p class="lh-1 mb-0">
-                                                            <span class="text-black-50 small">with</span>
-                                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                            <span class="text-black-50 small">  </span>
+                                                            <span class="text-black-50 small font-weight-bold">  </span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -750,30 +660,30 @@
                                                 <div class="my-32pt">
                                                     <div class="d-flex align-items-center mb-8pt justify-content-center">
                                                         <div class="d-flex align-items-center mr-8pt">
-                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">  </span>
+                                                            <p class="flex text-black-50 lh-1 mb-0"><small>  </small></p>
                                                         </div>
                                                         <div class="d-flex align-items-center">
-                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">  </span>
+                                                            <p class="flex text-black-50 lh-1 mb-0"><small>  </small></p>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex align-items-center justify-content-center">
-                                                        <a href="student-take-lesson.html" class="btn btn-primary mr-8pt">Resume</a>
-                                                        <a href="student-take-course.html" class="btn btn-outline-secondary ml-0">Start over</a>
+                                                        <a href="student-take-lesson.html" class="btn btn-primary mr-8pt">  </a>
+                                                        <a href="student-take-course.html" class="btn btn-outline-secondary ml-0">  </a>
                                                     </div>
                                                 </div>
 
                                                 <div class="d-flex align-items-center">
-                                                    <small class="text-black-50 mr-8pt">Your rating</small>
+                                                    <small class="text-black-50 mr-8pt">  </small>
                                                     <div class="rating mr-8pt">
+                                                        <!-- <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span>
+                                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span> -->
                                                     </div>
-                                                    <small class="text-black-50">4/5</small>
+                                                    <small class="text-black-50">  </small>
                                                 </div>
 
 
@@ -802,20 +712,20 @@
                                                     <div class="card-body">
                                                         <div class="d-flex">
                                                             <div class="flex">
-                                                                <a class="card-title" href="student-take-course.html">Build an iOS Application in Swift</a>
-                                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                                <a class="card-title" href="student-take-course.html">  </a>
+                                                                <small class="text-50 font-weight-bold mb-4pt">  </small>
                                                             </div>
-                                                            <a href="student-take-course.html" class="ml-4pt material-icons text-accent card-course__icon-favorite">favorite</a>
+                                                            <a href="student-take-course.html" class="ml-4pt material-icons text-accent card-course__icon-favorite">  </a>
                                                         </div>
                                                         <div class="d-flex">
                                                             <div class="rating flex">
+                                                                <!-- <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                <span class="rating__item"><span class="material-icons">star_border</span></span> -->
                                                             </div>
-                                                            <small class="text-50">6 hours</small>
+                                                            <small class="text-50">  </small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -826,10 +736,10 @@
                                                         <img src="<?php echo base_url ('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                                     </div>
                                                     <div class="media-body">
-                                                        <div class="card-title mb-0">Build an iOS Application in Swift</div>
+                                                        <div class="card-title mb-0">  </div>
                                                         <p class="lh-1 mb-0">
-                                                            <span class="text-black-50 small">with</span>
-                                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                            <span class="text-black-50 small">  </span>
+                                                            <span class="text-black-50 small font-weight-bold">  </span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -838,28 +748,28 @@
                                                 <div class="my-32pt">
                                                     <div class="d-flex align-items-center mb-8pt justify-content-center">
                                                         <div class="d-flex align-items-center mr-8pt">
-                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt"> </span>
+                                                            <p class="flex text-black-50 lh-1 mb-0"><small> </small></p>
                                                         </div>
                                                         <div class="d-flex align-items-center">
-                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt"> </span>
+                                                            <p class="flex text-black-50 lh-1 mb-0"><small> </small></p>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex align-items-center justify-content-center">
-                                                        <a href="student-take-lesson.html" class="btn btn-primary mr-8pt">Resume</a>
-                                                        <a href="student-take-course.html" class="btn btn-outline-secondary ml-0">Start over</a>
+                                                        <a href="student-take-lesson.html" class="btn btn-primary mr-8pt"> </a>
+                                                        <a href="student-take-course.html" class="btn btn-outline-secondary ml-0"> </a>
                                                     </div>
                                                 </div>
 
                                                 <div class="d-flex align-items-center">
-                                                    <small class="text-black-50 mr-8pt">Your rating</small>
+                                                    <small class="text-black-50 mr-8pt"> </small>
                                                     <div class="rating mr-8pt">
+                                                        <!-- <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span>
+                                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span> -->
                                                     </div>
                                                     <small class="text-black-50">4/5</small>
                                                 </div>
@@ -880,8 +790,8 @@
                                                     <img src="<?php echo base_url ('assets/tealdark/images/paths/wordpress_430x168.png')?>" alt="course">
                                                     <span class="overlay__content">
                                                         <span class="overlay__action d-flex flex-column text-center">
-                                                            <i class="material-icons">play_circle_outline</i>
-                                                            <small>Resume course</small>
+                                                            <i class="material-icons"> </i>
+                                                            <small> </small>
                                                         </span>
                                                     </span>
                                                 </a>
@@ -890,20 +800,20 @@
                                                     <div class="card-body">
                                                         <div class="d-flex">
                                                             <div class="flex">
-                                                                <a class="card-title" href="student-take-course.html">Build a WordPress Website</a>
-                                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                                <a class="card-title" href="student-take-course.html"> </a>
+                                                                <small class="text-50 font-weight-bold mb-4pt"> </small>
                                                             </div>
-                                                            <a href="student-take-course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                            <a href="student-take-course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite"> </a>
                                                         </div>
                                                         <div class="d-flex">
                                                             <div class="rating flex">
+                                                                <!-- <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                <span class="rating__item"><span class="material-icons">star_border</span></span> -->
                                                             </div>
-                                                            <small class="text-50">6 hours</small>
+                                                            <small class="text-50"> </small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -914,10 +824,10 @@
                                                         <img src="<?php echo base_url ('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                                     </div>
                                                     <div class="media-body">
-                                                        <div class="card-title mb-0">Build a WordPress Website</div>
+                                                        <div class="card-title mb-0"> </div>
                                                         <p class="lh-1 mb-0">
-                                                            <span class="text-black-50 small">with</span>
-                                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                            <span class="text-black-50 small"> </span>
+                                                            <span class="text-black-50 small font-weight-bold"> </span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -926,30 +836,30 @@
                                                 <div class="my-32pt">
                                                     <div class="d-flex align-items-center mb-8pt justify-content-center">
                                                         <div class="d-flex align-items-center mr-8pt">
-                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt"> </span>
+                                                            <p class="flex text-black-50 lh-1 mb-0"><small> </small></p>
                                                         </div>
                                                         <div class="d-flex align-items-center">
-                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt"> </span>
+                                                            <p class="flex text-black-50 lh-1 mb-0"><small> </small></p>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex align-items-center justify-content-center">
-                                                        <a href="student-take-lesson.html" class="btn btn-primary mr-8pt">Resume</a>
-                                                        <a href="student-take-course.html" class="btn btn-outline-secondary ml-0">Start over</a>
+                                                        <a href="student-take-lesson.html" class="btn btn-primary mr-8pt"> </a>
+                                                        <a href="student-take-course.html" class="btn btn-outline-secondary ml-0"> </a>
                                                     </div>
                                                 </div>
 
                                                 <div class="d-flex align-items-center">
-                                                    <small class="text-black-50 mr-8pt">Your rating</small>
+                                                    <small class="text-black-50 mr-8pt"> </small>
                                                     <div class="rating mr-8pt">
+                                                        <!-- <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span>
+                                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span> -->
                                                     </div>
-                                                    <small class="text-black-50">4/5</small>
+                                                    <small class="text-black-50"> </small>
                                                 </div>
 
 
@@ -961,15 +871,12 @@
 
                                             <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
 
-
-
-
                                                 <a href="student-take-course.html" class="js-image" data-position="left">
                                                     <img src="<?php echo base_url ('assets/tealdark/images/paths/react_430x168.png')?>" alt="course">
                                                     <span class="overlay__content">
                                                         <span class="overlay__action d-flex flex-column text-center">
-                                                            <i class="material-icons">play_circle_outline</i>
-                                                            <small>Resume course</small>
+                                                            <i class="material-icons"> </i>
+                                                            <small> </small>
                                                         </span>
                                                     </span>
                                                 </a>
@@ -978,20 +885,20 @@
                                                     <div class="card-body">
                                                         <div class="d-flex">
                                                             <div class="flex">
-                                                                <a class="card-title" href="student-take-course.html">Become a React Native Developer</a>
-                                                                <small class="text-50 font-weight-bold mb-4pt">Elijah Murray</small>
+                                                                <a class="card-title" href="student-take-course.html"> </a>
+                                                                <small class="text-50 font-weight-bold mb-4pt"> </small>
                                                             </div>
-                                                            <a href="student-take-course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite">favorite</a>
+                                                            <a href="student-take-course.html" class="ml-4pt material-icons text-20 card-course__icon-favorite"> </a>
                                                         </div>
                                                         <div class="d-flex">
                                                             <div class="rating flex">
+                                                                <!-- <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
                                                                 <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star</span></span>
-                                                                <span class="rating__item"><span class="material-icons">star_border</span></span>
+                                                                <span class="rating__item"><span class="material-icons">star_border</span></span> -->
                                                             </div>
-                                                            <small class="text-50">6 hours</small>
+                                                            <small class="text-50"> </small>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1002,10 +909,10 @@
                                                         <img src="<?php echo base_url ('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="rounded">
                                                     </div>
                                                     <div class="media-body">
-                                                        <div class="card-title mb-0">Become a React Native Developer</div>
+                                                        <div class="card-title mb-0"> </div>
                                                         <p class="lh-1 mb-0">
-                                                            <span class="text-black-50 small">with</span>
-                                                            <span class="text-black-50 small font-weight-bold">Elijah Murray</span>
+                                                            <span class="text-black-50 small"> </span>
+                                                            <span class="text-black-50 small font-weight-bold"> </span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -1014,28 +921,28 @@
                                                 <div class="my-32pt">
                                                     <div class="d-flex align-items-center mb-8pt justify-content-center">
                                                         <div class="d-flex align-items-center mr-8pt">
-                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">access_time</span>
-                                                            <p class="flex text-black-50 lh-1 mb-0"><small>50 minutes left</small></p>
+                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt"> </span>
+                                                            <p class="flex text-black-50 lh-1 mb-0"><small> </small></p>
                                                         </div>
                                                         <div class="d-flex align-items-center">
-                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt">play_circle_outline</span>
-                                                            <p class="flex text-black-50 lh-1 mb-0"><small>12 lessons</small></p>
+                                                            <span class="material-icons icon-16pt text-black-50 mr-4pt"> </span>
+                                                            <p class="flex text-black-50 lh-1 mb-0"><small> </small></p>
                                                         </div>
                                                     </div>
                                                     <div class="d-flex align-items-center justify-content-center">
-                                                        <a href="student-take-lesson.html" class="btn btn-primary mr-8pt">Resume</a>
-                                                        <a href="student-take-course.html" class="btn btn-outline-secondary ml-0">Start over</a>
+                                                        <a href="student-take-lesson.html" class="btn btn-primary mr-8pt"> </a>
+                                                        <a href="student-take-course.html" class="btn btn-outline-secondary ml-0"> </a>
                                                     </div>
                                                 </div>
 
                                                 <div class="d-flex align-items-center">
-                                                    <small class="text-black-50 mr-8pt">Your rating</small>
+                                                    <small class="text-black-50 mr-8pt"> </small>
                                                     <div class="rating mr-8pt">
+                                                        <!-- <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
                                                         <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                                        <span class="rating__item"><span class="material-icons text-primary">star</span></span>
-                                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span>
+                                                        <span class="rating__item"><span class="material-icons text-primary">star_border</span></span> -->
                                                     </div>
                                                     <small class="text-black-50">4/5</small>
                                                 </div>
@@ -1053,9 +960,9 @@
                         </div>
                     </div>
 
-                    <h4>Discussions</h4>
+                    <!-- <h4>Discussions</h4> -->
 
-                    <div class="card">
+                    <!-- <div class="card">
                         <div class="card-header">
                             <div class="row align-items-center" style="white-space: nowrap;">
                                 <div class="col-lg-auto">
@@ -1138,7 +1045,7 @@
                         <div class="card-body text-center">
                             <a href="student-discussions.html" class="text-underline">View more discussions</a>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -1147,1009 +1054,9 @@
 
         </div>
         <!-- // END Header Layout Content -->
-
-        <div class="js-fix-footer  border-top-2">
-            <div class="container page-section py-lg-48pt">
-                <div class="row">
-                    <div class="col-md-8">
-                        <div class="row">
-                            <div class="col-6 col-md-4 mb-24pt mb-md-0">
-                                <h4 class="">Learn</h4>
-                                <nav class="nav nav-links nav--flush flex-column">
-                                    <a class="nav-link" href="library.html">Library</a>
-                                    <a class="nav-link" href="library-featured.html">Featured</a>
-                                    <a class="nav-link" href="library-filters.html">Explore</a>
-                                    <a class="nav-link" href="paths.html">Learning Paths</a>
-                                </nav>
-                            </div>
-                            <div class="col-6 col-md-4 mb-24pt mb-md-0">
-                                <h4 class="">Join us</h4>
-                                <nav class="nav nav-links nav--flush flex-column">
-                                    <a class="nav-link" href="pricing.html">Pricing</a>
-                                    <a class="nav-link" href="login.html">Login</a>
-                                    <a class="nav-link" href="signup.html">Sign Up</a>
-                                    <a class="nav-link" href="signup-payment.html">Payment</a>
-                                </nav>
-                            </div>
-                            <div class="col-6 col-md-4 mb-32pt mb-md-0">
-                                <h4 class="">Community</h4>
-                                <nav class="nav nav-links nav--flush flex-column">
-                                    <a class="nav-link" href="student-discussions.html">Discussions</a>
-                                    <a class="nav-link" href="student-discussions-ask.html">Ask Question</a>
-                                    <a class="nav-link" href="student-profile.html">Student Profile</a>
-                                    <a class="nav-link" href="instructor-profile.html">Instructor Profile</a>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 text-md-right">
-                        <p class="text-70 brand justify-content-md-end">
-                            <img class="brand-icon" src="<?php echo base_url ('assets/tealdark/images/logo/white-100@2x.png')?>" width="30" alt="Tutorio"> Tutorio
-                        </p>
-                        <p class="text-muted mb-0 mb-lg-16pt">Tutorio is an online learning platform that helps anyone achieve their personal and professional goals.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-footer page-section py-lg-32pt">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
-                            <p class="text-white-70 mb-8pt"><strong>Follow us</strong></p>
-                            <nav class="nav nav-links nav--flush">
-                                <a href="#" class="nav-link mr-8pt"><img src="<?php echo base_url ('assets/tealdark/images/icon/footer/facebook-square@2x.png')?>" width="24" height="24" alt="Facebook"></a>
-                                <a href="#" class="nav-link mr-8pt"><img src="<?php echo base_url ('assets/tealdark/images/icon/footer/twitter-square@2x.png')?>" width="24" height="24" alt="Twitter"></a>
-                                <a href="#" class="nav-link mr-8pt"><img src="<?php echo base_url ('assets/tealdark/images/icon/footer/vimeo-square@2x.png')?>" width="24" height="24" alt="Vimeo"></a>
-                                <a href="#" class="nav-link"><img src="<?php echo base_url ('assets/tealdark/images/icon/footer/youtube-square@2x.png')?>" width="24" height="24" alt="YouTube"></a>
-                            </nav>
-                        </div>
-                        <div class="col-md-6 col-sm-4 mb-24pt mb-md-0 d-flex align-items-center">
-                            <a href="" class="btn btn-outline-white">English <span class="icon--right material-icons">arrow_drop_down</span></a>
-                        </div>
-                        <div class="col-md-4 text-md-right">
-                            <p class="mb-8pt d-flex align-items-md-center justify-content-md-end">
-                                <a href="" class="text-white-70 text-underline mr-16pt">Terms</a>
-                                <a href="" class="text-white-70 text-underline">Privacy policy</a>
-                            </p>
-                            <p class="text-white-50 mb-0">Copyright 2019 &copy; All rights reserved.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
-    <!-- // END Header Layout -->
 
-    <div class="navbar navbar-expand-sm navbar-mini navbar-dark fixed-bottom bg-dark d-none d-md-flex p-0" id="demo-navbar">
-        <div class="container-fluid">
-
-            <!-- Main Navigation -->
-            <ul class="nav navbar-nav flex-nowrap">
-                <li class="nav-item dropup">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Catalog</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="index.html">Home page</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="library.html">Library</a>
-                        <a class="dropdown-item" href="library-featured.html">Featured</a>
-                        <a class="dropdown-item" href="library-development.html">Development</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="library-filters.html">Explore</a>
-                        <a class="dropdown-item" href="library-filters-list.html">Explore List</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="paths.html">Learning Paths</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="course.html">Course Details</a>
-                        <a class="dropdown-item" href="lesson.html">Lesson Details</a>
-                        <a class="dropdown-item" href="path.html">Path Details</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup active">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Student</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item active" href="student-dashboard.html">Dashboard</a>
-                        <a class="dropdown-item" href="student-my-courses.html">My Courses</a>
-                        <a class="dropdown-item" href="student-take-course.html">Take Course</a>
-                        <a class="dropdown-item" href="student-take-lesson.html">Take Lesson</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-take-quiz.html">Take Quiz</a>
-                        <a class="dropdown-item" href="student-quiz-result-details.html">Quiz Result</a>
-                        <a class="dropdown-item" href="student-quiz-results.html">My Quizzes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-path-assessment.html">Skill Assessment</a>
-                        <a class="dropdown-item" href="student-path-assessment-result.html">Skill Result</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Instructor</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="instructor-dashboard.html">Dashboard</a>
-                        <a class="dropdown-item" href="instructor-courses.html">Courses</a>
-                        <a class="dropdown-item" href="instructor-quizzes.html">Quizzes</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="instructor-edit-course.html">Edit Course</a>
-                        <a class="dropdown-item" href="instructor-edit-quiz.html">Edit Quiz</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="instructor-earnings.html">Earnings</a>
-                        <a class="dropdown-item" href="instructor-statement.html">Statement</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="student-discussions.html">Discussions</a>
-                        <a class="dropdown-item" href="student-discussion.html">Discussion Details</a>
-                        <a class="dropdown-item" href="student-discussions-ask.html">Ask Question</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-profile.html">Student Profile</a>
-                        <a class="dropdown-item" href="instructor-profile.html">Instructor Profile</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="pricing.html">Pricing</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Login</a>
-                        <a class="dropdown-item" href="signup.html">Signup</a>
-                        <a class="dropdown-item" href="signup-payment.html">Payment</a>
-                        <a class="dropdown-item" href="reset-password.html">Reset Password</a>
-                        <a class="dropdown-item" href="change-password.html">Change Password</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-edit-account.html">Edit Account</a>
-                        <a class="dropdown-item" href="student-edit-account-profile.html">Profile &amp; Privacy</a>
-                        <a class="dropdown-item" href="student-edit-account-notifications.html">Email Notifications</a>
-                        <a class="dropdown-item" href="student-edit-account-password.html">Account Password</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="student-billing.html">Subscription</a>
-                        <a class="dropdown-item" href="student-billing-upgrade.html">Upgrade Account</a>
-                        <a class="dropdown-item" href="student-billing-payment.html">Payment Information</a>
-                        <a class="dropdown-item" href="student-billing-history.html">Payment History</a>
-                        <a class="dropdown-item" href="student-billing-invoice.html">Invoice</a>
-                    </div>
-                </li>
-                <li class="nav-item dropup">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Components</a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="ui-buttons.html">Buttons</a>
-                        <a class="dropdown-item" href="ui-charts.html">Charts</a>
-                        <a class="dropdown-item" href="ui-avatars.html">Avatars</a>
-                        <a class="dropdown-item" href="ui-forms.html">Forms</a>
-                        <a class="dropdown-item" href="ui-loaders.html">Loaders</a>
-                        <a class="dropdown-item" href="ui-tables.html">Tables</a>
-                        <a class="dropdown-item" href="ui-cards.html">Cards</a>
-                        <a class="dropdown-item" href="ui-icons.html">Icons</a>
-                        <a class="dropdown-item" href="ui-tabs.html">Tabs</a>
-                        <a class="dropdown-item" href="ui-alerts.html">Alerts</a>
-                        <a class="dropdown-item" href="ui-badges.html">Badges</a>
-                        <a class="dropdown-item" href="ui-progress.html">Progress</a>
-                        <a class="dropdown-item" href="ui-pagination.html">Pagination</a>
-                    </div>
-                </li>
-            </ul>
-            <!-- // END Main Navigation -->
-
-        </div>
-    </div>
-    <!-- drawer -->
-    <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
-        <div class="mdk-drawer__content">
-            <div class="sidebar sidebar-dark sidebar-left" data-perfect-scrollbar>
-                <div class="sidebar-p-a sidebar-b-b sidebar-m-b pt-0">
-
-                    <!-- Brand -->
-                    <a href="index.html" class="sidebar-brand">
-                        <img class="sidebar-brand-icon" src="<?php echo base_url ('assets/tealdark/images/logo/white-100.svg')?>" width="30" alt="Tutorio">
-                        <span>Tutorio</span>
-                    </a>
-                    <!-- // END Brand -->
-
-                    <!-- Search -->
-                    <form action="library-filters.html" class="search-form search-form--black">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <button class="btn" type="submit" role="button"><i class="material-icons">search</i></button>
-                    </form>
-
-                </div>
-
-                <ul class="sidebar-menu">
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" href="index.html">Home Page</a>
-                    </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="#catalog_menu">
-                            Catalog
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="catalog_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library.html">Library</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library-featured.html">Featured</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library-development.html">Development</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library-filters.html">Explore</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="library-filters-list.html">Explore List</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="paths.html">Learning Paths</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="course.html">Course Details</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="lesson.html">Lesson Details</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="path.html">Path Details</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="sidebar-heading">Pages</div>
-                <ul class="sidebar-menu">
-                    <li class="sidebar-menu-item active open">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="#student_menu">
-                            Student
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse show sm-indent" id="student_menu">
-                            <li class="sidebar-menu-item active">
-                                <a class="sidebar-menu-button" href="student-dashboard.html">Dashboard</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-my-courses.html">My Courses</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-quiz-results.html">My Quizzes</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-take-course.html">Take Course</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-take-lesson.html">Take Lesson</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-take-quiz.html">Take Quiz</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-quiz-result-details.html">Quiz Result</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-path-assessment.html">Skill Assessment</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-path-assessment-result.html">Skill Result</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="#instructor_menu">
-                            Instructor
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="instructor_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-dashboard.html">Dashboard</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-courses.html">Manage Courses</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-quizzes.html">Manage Quizzes</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-edit-course.html">Edit Course</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-edit-quiz.html">Edit Quiz</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-earnings.html">Earnings</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-statement.html">Statement</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="#account_menu">
-                            Account
-                            <span class="sidebar-menu-badge badge badge-primary badge-notifications ml-auto">2</span>
-                            <span class="sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="account_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="pricing.html">Pricing</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="login.html">Login</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="signup.html">Signup</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="signup-payment.html">Payment</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="reset-password.html">Reset Password</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="change-password.html">Change Password</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-edit-account.html">Edit Account</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-edit-account-profile.html">Profile &amp; Privacy</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-edit-account-notifications.html">Email Notifications</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-edit-account-password.html">Account Password</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing.html">Subscription</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing-upgrade.html">Upgrade Account</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing-payment.html">Payment Information</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing-history.html">Payment History</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-billing-invoice.html">Invoice</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="#community_menu">
-                            Community
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="community_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-discussions.html">Discussions</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-discussion.html">Discussion Details</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-discussions-ask.html">Ask Question</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="student-profile.html">Student Profile</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="instructor-profile.html">Instructor Profile</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <div class="sidebar-heading">Components</div>
-                <ul class="sidebar-menu">
-                    <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" data-toggle="collapse" href="#components_menu">
-                            Components
-                            <span class="ml-auto sidebar-menu-toggle-icon"></span>
-                        </a>
-                        <ul class="sidebar-submenu collapse sm-indent" id="components_menu">
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-buttons.html">Buttons</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-charts.html">Charts</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-avatars.html">Avatars</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-forms.html">Forms</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-loaders.html">Loaders</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-tables.html">Tables</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-cards.html">Cards</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-icons.html">Icons</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-tabs.html">Tabs</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-alerts.html">Alerts</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-badges.html">Badges</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-progress.html">Progress</a>
-                            </li>
-                            <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="ui-pagination.html">Pagination</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </div>
-    <!-- // END drawer -->
-    <!-- App Settings FAB -->
-    <div id="app-settings">
-        <app-settings theme-active="teal-dark" :theme-location="{
-      'blue-light': 'http://tutorio-bootstrap.frontendmatter.com/student-dashboard.html',
-      'blue-dark': 'http://tutorio-dark.frontendmatter.com/student-dashboard.html',
-      'teal-light': 'http://tutorio-teal.frontendmatter.com/student-dashboard.html',
-      'teal-dark': 'http://tutorio-teal-dark.frontendmatter.com/student-dashboard.html'
-    }" sidebar-type="dark" sidebar-variant="bg-transparent border-0"></app-settings>
-    </div>
-    <!-- Modal -->
-    <div class="modal courses-modal" id="courses" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 col-i8-plus bg-body pr-0">
-                            <div class="py-16pt pl-16pt menu">
-                                <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link active" href="#courses-development" data-toggle="tab">Development</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#courses-design" data-toggle="tab">Design</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#courses-photography" data-toggle="tab">Photography</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#courses-marketing" data-toggle="tab">Marketing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#courses-business" data-toggle="tab">Business</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-8 col-sm-6 col-i8-plus-auto tab-content">
-
-
-                            <div id="courses-development" class="tab-pane show active">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Web Development</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">JavaScript</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">HTML</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">CSS</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">WordPress</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">PHP</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">iOS Development</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/devops_40x40@2x.png')?>" width="40" height="40" alt="Development Tools" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id="courses-design" class="tab-pane">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Illustration</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Design Skills</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Design Techniques</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Page Layout</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Projects</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Drawing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Typography</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/devops_40x40@2x.png')?>" width="40" height="40" alt="Development Tools" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id="courses-photography" class="tab-pane">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Cameras</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Raw Processing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Masking</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Compositing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Portraits</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Photo Management</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Lighting</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/devops_40x40@2x.png')?>" width="40" height="40" alt="Development Tools" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id="courses-marketing" class="tab-pane">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Small Business</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Enterprise Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Content Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Online Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Social Media Marketing</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Advertising</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/devops_40x40@2x.png')?>" width="40" height="40" alt="Development Tools" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div id="courses-business" class="tab-pane">
-                                <div class="row no-gutters">
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Courses</h5>
-                                                <ul class="nav flex-column mb-24pt">
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Business Skills</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Productivity</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Communication</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Leadership</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Management</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Career Development</a>
-                                                    </li>
-
-                                                    <li class="nav-item">
-                                                        <a class="nav-link px-0" href="library.html">Spreadsheets</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <a href="library.html" class="btn btn-block text-center btn-secondary">Library</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 p-0">
-                                        <div class="p-24pt d-flex h-100 flex-column">
-                                            <div class="flex">
-                                                <h5 class="text-black-100">Learning Paths</h5>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/angular_40x40@2x.png')?>" width="40" height="40" alt="Angular" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Angular</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">24 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/swift_40x40@2x.png')?>" width="40" height="40" alt="Swift" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Swift</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">22 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/react_40x40@2x.png')?>" width="40" height="40" alt="React Native" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">React Native</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">18 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-16pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/wordpress_40x40@2x.png')?>" width="40" height="40" alt="WordPress" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">WordPress</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">13 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                                <div class="mb-24pt">
-                                                    <a href="path.html" class="media text-black-100">
-                                                        <img src="<?php echo base_url ('assets/tealdark/images/paths/devops_40x40@2x.png')?>" width="40" height="40" alt="Development Tools" class="media-left rounded">
-                                                        <span class="media-body">
-                                                            <span class="card-title d-block mb-0">Development Tools</span>
-                                                            <span class="text-muted text-black-70 d-flex lh-1">5 courses</span>
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div>
-                                                <a href="paths.html" class="btn btn-block text-center btn-outline-secondary">Learning Paths</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php $this->load->view("templates/footer.php") ?>
 
     <!-- jQuery -->
     <script src="<?php echo base_url ('assets/tealdark/vendor/jquery.min.js')?>"></script>
