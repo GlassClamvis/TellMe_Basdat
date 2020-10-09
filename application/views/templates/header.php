@@ -24,12 +24,9 @@
                     <!-- Navbar Brand -->
                     <a href="<?php echo base_url('Welcome')?>" class="navbar-brand">
                       <img class="navbar-brand-icon" width="30" alt="">
-                      <img src="<?php echo base_url('assets/tealdark/images/logo/putih.png')?>" class="navbar-brand-icon" width="60" alt="">
-                        <span class="d-none d-md-block">Tell Me Basdat</span>
+                      <img src="<?php echo base_url('assets/tealdark/images/logo/putih.png')?>" class="navbar-brand-icon" width="100" alt="">
+                        <span class="d-none d-md-block">TellMe Basdat</span>
                     </a>
-
-                    <button class="btn btn-black mr-16pt" data-toggle="modal" data-target="#courses">Courses <i class="material-icons">arrow_drop_down</i></button>
-
                     <form class="search-form search-form--black search-form-courses d-none d-md-flex" action="library-filters.html">
                         <input type="text" class="form-control" placeholder="What would you like to learn?">
                         <button class="btn" type="submit" role="button"><i class="material-icons">search</i></button>
