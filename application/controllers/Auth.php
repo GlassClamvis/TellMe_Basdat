@@ -27,15 +27,25 @@ class Auth extends CI_Controller
         } else {
             $nim = $this->input->post('nim');
             $email = $this->input->post('email');
-            $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
+            $id_mahasiswa = $this->db->get('tm_login');
+            // $user = $this->db->get('tm_login', ['tm_mahasiswa_id' => $id_mahasiswa])->row_array();
+            // $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
             $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_email' => $email])->row_array();
 
             if ($user) {
                 $token = base64_encode(random_bytes(32));
                 $user_token = [
-                    'email' => $email,
-                    'token' => $token
+
+                    'tm_forgot_password_link' => $token
                 ];
+
+                // $this->db->insert('tm_forgot_password', $user_token);
+
+                $this->_sendEmail($token);
+
+                $this->session->set_flashdata('message', '<div class="alert 
+                alert-success" role="alert">Berhasil! Tautan akan dikirimkan melalui email anda. Silahkan cek email anda untuk melanjutkan ke halaman reset password melalui tautan tersebut. Tautan berlaku 1x24 jam!</div>');
+                redirect('auth/lupa_password');
 
                 // $this->db->insert('tm_forgot_password', $user_token);
             } else {
@@ -44,17 +54,14 @@ class Auth extends CI_Controller
                 redirect('auth/lupa_password');
             }
             // token yg dikirim ke email
-            $token = base64_encode(random_bytes(32));
-            $user_token = [
-                'email' => $email,
-                'token' => $token
-            ];
+            // $token = base64_encode(random_bytes(32));
+            // $user_token = [
+            //     'nim'   => $nim,
+            //     'email' => $email,
+            //     'token' => $token
+            // ];
 
-            $this->_sendEmail();
 
-            $this->session->set_flashdata('message', '<div class="alert 
-            alert-success" role="alert">Berhasil! Tautan akan dikirimkan melalui email anda. Silahkan cek email anda untuk melanjutkan ke halaman reset password melalui tautan tersebut. Tautan berlaku 1x24 jam!</div>');
-            redirect('auth/lupa_password');
         }
     }
 
@@ -63,7 +70,7 @@ class Auth extends CI_Controller
         $config = [
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_user' => 'cobaemail.tellme@gmail.com',
+            'smtp_user' => 'cobaemail.tm909@gmail.com',
             'smtp_pass' => 'tellme1212',
             'smtp_port' => 465,
             'mailtype' => 'html',
@@ -76,10 +83,10 @@ class Auth extends CI_Controller
 
 
         $this->email->from('noreply@gmail.com', 'Tellme Basdat');
-        $this->email->to($this->input->post('email'));
+        $this->email->to($this->input->post('email', 'nim'));
         $this->email->subject('Reset Password');
         $this->email->message('Klik disini untuk ganti password : <a
-        href="' . base_url() . 'auth/resetpassword?email=' . $this->input->post('email') . '"> Reset Password</a>');
+        href="' . base_url() . 'auth/resetpassword?email=' . $this->input->post('email') . '&nim=' . $this->input->post('nim') . '"> Reset Password</a>');
 
         if ($this->email->send()) {
             return true;
@@ -96,10 +103,26 @@ class Auth extends CI_Controller
         // $token = $this->input->get('token')
 
         // $user = $this->db->get_where('tm_login', ['tm_login_username' => $nim])->row_array();
+        $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
         $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_email' => $email])->row_array();
 
         if ($user) {
-            $this->ubahPassword();
+            $vall = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_email' => $email])->row_array();
+            $vall = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
+
+            // $this->input->get('nim');
+            // $this->input->get('email');
+
+
+            if ($vall) {
+                $this->session->set_userdata('nimget', $nim);
+                $this->session->set_userdata('reset_email', $email);
+                $this->ubahPassword();
+            } else {
+                $this->session->set_flashdata('message', '<div class="alert 
+            alert-danger" role="alert">Reset password gagal. Email tidak terdaftar!</div>');
+                redirect('auth/lupa_password');
+            }
         } else {
             $this->session->set_flashdata('message', '<div class="alert 
             alert-danger" role="alert">Reset password gagal. Email tidak terdaftar!</div>');
@@ -109,6 +132,10 @@ class Auth extends CI_Controller
 
     public function ubahPassword()
     {
+        $id = $this->db->get_where('tm_login', 'tm_mahasiswa_id')->row_array();
+        $email = $this->session->userdata('reset_email');
+        $nim = $this->session->userdata('nimget');
+        // $nim = $this->db->get('tm_login', ['tm_login_username' => $nim])->row_array();
 
         $this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[6]|matches[password2]');
         $this->form_validation->set_rules('password2', 'Repeat Password', 'trim|required|min_length[6]|matches[password1]');
@@ -117,16 +144,37 @@ class Auth extends CI_Controller
             // $data['title'] = 'Reset Password';
             $this->load->view('content/v_ubah_password');
         } else {
-            $password = $this->input->post('password1');
+            $id = $this->db->get_where('tm_login', 'tm_mahasiswa_id')->row_array();
+            // $password = password_hash($this->input->post('password1', true), PASSWORD_DEFAULT);
+            $password = $this->input->post('password1', true);
+            $nim = $this->session->userdata('nimget');
             $email = $this->session->userdata('reset_email');
-            $nim = $this->input->get('nim');
+            // $nim = $this->input->get('nim');
+            // $ini = $this->db->get_where('tm_login', ['tm_login_username' => $nim])->row_array();
+            // $nim = $this->db->get_where('tm_login', ['tm_login_username' => $nim])->row_array();
 
             $this->db->set('tm_login_password', $password);
-            // $this->db->where('tm_login_username', $nim);
+            $this->db->where('tm_login_username', $nim);
             $this->db->update('tm_login');
 
+            // $this->db->update('tm_login', ['tm_login_password' => $password], ['tm_login_email' => $email]);
+
+            // $update = array(
+
+            //     'tm_mahasiswa_id' => $id,
+            //     'tm_login_username' => $nim,
+            //     'tm_login_password' => $password
+            // );
+
+            // $this->db->update('tm_login', array('tm_login_password' => $password, 'tm_login_username' => $nim));
+
+
+            // $this->db->set($update);
+            // $this->db->insert('tm_login');
+
+
             $this->session->set_flashdata('message', '<div class="alert 
-            alert-succes" role="alert">Password berhasil diubah. Silahkan Login!</div>');
+            alert-success" role="alert">Password berhasil diubah. Silahkan Login!</div>');
             redirect('auth/lupa_password');
         }
     }
