@@ -23,14 +23,16 @@ class Auth extends CI_Controller
         if ($this->form_validation->run() == false) {
 
             // $data['title'] = 'Lupa Password';
+
             $this->load->view('content/v_lupa_password');
         } else {
             $nim = $this->input->post('nim');
             $email = $this->input->post('email');
             $id_mahasiswa = $this->db->get('tm_login');
-            // $user = $this->db->get('tm_login', ['tm_mahasiswa_id' => $id_mahasiswa])->row_array();
-            // $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
             $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_email' => $email])->row_array();
+            $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
+            // $user = $this->db->get_where('tm_pegawai', ['tm_pegawai_email' => $email])->row_array();
+            // $user = $this->db->get_where('tm_pegawai', ['tm_pegawai_nip' => $nim])->row_array();
 
             if ($user) {
                 $token = base64_encode(random_bytes(32));
@@ -53,15 +55,6 @@ class Auth extends CI_Controller
             alert-danger" role="alert">NIM atau Email tidak terdaftar!</div>');
                 redirect('auth/lupa_password');
             }
-            // token yg dikirim ke email
-            // $token = base64_encode(random_bytes(32));
-            // $user_token = [
-            //     'nim'   => $nim,
-            //     'email' => $email,
-            //     'token' => $token
-            // ];
-
-
         }
     }
 
@@ -70,7 +63,7 @@ class Auth extends CI_Controller
         $config = [
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_user' => 'cobaemail.tm909@gmail.com',
+            'smtp_user' => 'cb.tellme909@gmail.com',
             'smtp_pass' => 'tellme1212',
             'smtp_port' => 465,
             'mailtype' => 'html',
@@ -80,7 +73,6 @@ class Auth extends CI_Controller
         ];
 
         $this->email->initialize($config);
-
 
         $this->email->from('noreply@gmail.com', 'Tellme Basdat');
         $this->email->to($this->input->post('email', 'nim'));
@@ -98,25 +90,24 @@ class Auth extends CI_Controller
 
     public function resetPassword()
     {
-        $nim = $this->input->get('nim');
         $email = $this->input->get('email');
+        $nim = $this->input->get('nim');
         // $token = $this->input->get('token')
 
-        // $user = $this->db->get_where('tm_login', ['tm_login_username' => $nim])->row_array();
-        $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
         $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_email' => $email])->row_array();
+        $user = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
+        // $user = $this->db->get_where('tm_pegawai', ['tm_pegawai_email' => $email])->row_array();
+        // $user = $this->db->get_where('tm_pegawai', ['tm_pegawai_nip' => $nim])->row_array();
 
         if ($user) {
             $vall = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_email' => $email])->row_array();
             $vall = $this->db->get_where('tm_mahasiswa', ['tm_mahasiswa_nim' => $nim])->row_array();
-
-            // $this->input->get('nim');
-            // $this->input->get('email');
-
+            // $vall = $this->db->get_where('tm_pegawai', ['tm_pegawai_email' => $email])->row_array();
+            // $vall = $this->db->get_where('tm_pegawai', ['tm_pegawai_nip' => $nim])->row_array();
 
             if ($vall) {
-                $this->session->set_userdata('nimget', $nim);
                 $this->session->set_userdata('reset_email', $email);
+                $this->session->set_userdata('nimget', $nim);
                 $this->ubahPassword();
             } else {
                 $this->session->set_flashdata('message', '<div class="alert 
@@ -135,13 +126,12 @@ class Auth extends CI_Controller
         $id = $this->db->get_where('tm_login', 'tm_mahasiswa_id')->row_array();
         $email = $this->session->userdata('reset_email');
         $nim = $this->session->userdata('nimget');
-        // $nim = $this->db->get('tm_login', ['tm_login_username' => $nim])->row_array();
 
         $this->form_validation->set_rules('password1', 'Password', 'trim|required|min_length[6]|matches[password2]');
         $this->form_validation->set_rules('password2', 'Repeat Password', 'trim|required|min_length[6]|matches[password1]');
 
         if ($this->form_validation->run() == false) {
-            // $data['title'] = 'Reset Password';
+
             $this->load->view('content/v_ubah_password');
         } else {
             $id = $this->db->get_where('tm_login', 'tm_mahasiswa_id')->row_array();
@@ -149,29 +139,10 @@ class Auth extends CI_Controller
             $password = $this->input->post('password1', true);
             $nim = $this->session->userdata('nimget');
             $email = $this->session->userdata('reset_email');
-            // $nim = $this->input->get('nim');
-            // $ini = $this->db->get_where('tm_login', ['tm_login_username' => $nim])->row_array();
-            // $nim = $this->db->get_where('tm_login', ['tm_login_username' => $nim])->row_array();
 
             $this->db->set('tm_login_password', $password);
             $this->db->where('tm_login_username', $nim);
             $this->db->update('tm_login');
-
-            // $this->db->update('tm_login', ['tm_login_password' => $password], ['tm_login_email' => $email]);
-
-            // $update = array(
-
-            //     'tm_mahasiswa_id' => $id,
-            //     'tm_login_username' => $nim,
-            //     'tm_login_password' => $password
-            // );
-
-            // $this->db->update('tm_login', array('tm_login_password' => $password, 'tm_login_username' => $nim));
-
-
-            // $this->db->set($update);
-            // $this->db->insert('tm_login');
-
 
             $this->session->set_flashdata('message', '<div class="alert 
             alert-success" role="alert">Password berhasil diubah. Silahkan Login!</div>');
