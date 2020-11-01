@@ -2,13 +2,20 @@
 <?php $this->load->view("templates/header.php") ?>
 <!-- Header Layout Content -->
 <div class="mdk-header-layout__content page-content pb-0">
+<div class="bg-gradient-primary py-5">
+                <div class="container text-center">
+                    <div class="text-center mb-md-0">
+                        <img class="navbar-brand-icon" src="assets/tealdark/images/illustration/student/128/white.svg" width="100">
+                        <h1 class="text-white mb-0">Reset Password</h1>
+                        <center> <p class="text-white mb-0">Account Management</p> </center>
+                    </div>
 
-    <div class="bg-gradient-primary py-32pt">
+    <!-- <div class="bg-gradient-primary py-32pt">
         <div class="container d-flex flex-column flex-sm-row align-items-sm-center">
             <div class="flex">
                 <h1 class="text-white flex mb-0">Reset Password</h1>
                 <p class="lead text-white-50">Account Management</p>
-            </div>
+            </div> -->
             <!-- <p class="d-sm-none"></p>
             <a href="" class="btn btn-outline-white flex-column">
                 Need Help?

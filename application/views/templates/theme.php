@@ -1,5 +1,5 @@
 <div id="app-settings">
-    <app-settings theme-active="teal-dark" :theme-location="{
+    <app-settings theme-active="blue_light" :theme-location="{
   'blue-light': 'http://tutorio-bootstrap.frontendmatter.com/login.html',
   'blue-dark': 'http://tutorio-dark.frontendmatter.com/login.html',
   'teal-light': 'http://tutorio-teal.frontendmatter.com/login.html',

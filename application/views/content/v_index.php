@@ -12,9 +12,9 @@
                         <div class="row align-items-center text-center text-md-left">
                             <div class="col-md-6 col-lg-5 order-1 order-md-0">
                                 <h1 class="text-white"> <span class="d-block d-md-inline-block text-scramble js-text-scramble"></span></h1>
-                                <p class="lead mb-32pt mb-lg-48pt text-white">Business, Technology and Creative Skills taught by industry experts. Explore a wide range of skills with our professional tutorials.</p>
-                                <a href="library.html" class="btn btn-lg btn-white btn--raised mb-16pt">Browse Courses</a>
-                                <p class="mb-0"><a href="" class="text-white-70 text-underline"><strong>Are you a teacher?</strong></a></p>
+                                <p class="lead mb-32pt mb-lg-48pt text-white">Tellme Basdat adalah website learning tutorial untuk yang membantu Mahasiswa Dalam Pembelajaran Matakuliah Database </p>
+                                <!-- <a href="library.html" class="btn btn-lg btn-white btn--raised mb-16pt">Browse Courses</a>
+                                <p class="mb-0"><a href="" class="text-white-70 text-underline"><strong>Are you a teacher?</strong></a></p> -->
                             </div>
                             <div class="col-md-6 col-lg-7 order-0 order-md-1 text-center mb-32pt mb-md-0">
                                 <img src="<?php echo base_url('assets/tealdark/images/macbook-teal.png')?>" alt="macbook" class="home-macbook">
@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="navbar-submenu py-16pt py-sm-24pt py-md-32pt ">
+            <!-- <div class="navbar-submenu py-16pt py-sm-24pt py-md-32pt ">
                 <div class="container page__container">
                     <div class="row align-items-center">
                         <div class="d-flex col-md align-items-center border-bottom border-md-0 mb-16pt mb-md-0 pb-16pt pb-md-0">
@@ -56,9 +56,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="page-section border-bottom-2">
+            <!-- <div class="page-section border-bottom-2">
                 <div class="container page__container">
                     <div class="row align-items-end mb-16pt mb-md-32pt">
                         <div class="col-md-auto mb-32pt mb-md-0">
@@ -876,8 +876,9 @@
                         <a href="library.html" class="btn btn-outline-secondary">Browse Courses</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
+<!--             
             <div class="page-section border-bottom-2">
                 <div class="container page__container">
                     <div class="page-headline text-center">
@@ -1014,13 +1015,46 @@
                         <a href="paths.html" class="btn btn-outline-secondary">Browse Learning Paths</a>
                     </div>
                 </div>
+            </div> -->\
+        <div class="container">
+            <div class="card-deck">
+                <div class="card">
+                    <img src="<?php echo base_url('assets/tealdark/images/logo/item.png')?>" class="card-img-top" width="70"  alt="" >
+                    <div class="card-body">
+                        <h5 class="card-title">Class Beginner</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                    <div class="card-footer">
+                    <a href="#" class="btn btn-primary">Lihat Class Beginner</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="<?php echo base_url('assets/tealdark/images/logo/item.png')?>" class="card-img-top" width="70"  alt="" >
+                    <div class="card-body">
+                        <h5 class="card-title">Class Intermediate</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Lihat Class Intermediate</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="<?php echo base_url('assets/tealdark/images/logo/item.png')?>" class="card-img-top" width=""  alt="" >
+                    <div class="card-body">
+                        <h5 class="card-title">Class Expert</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-primary">Lihat Class Expert</a>
+                    </div>
+                </div>
             </div>
-
+</div>
             <div class="page-section">
                 <div class="container page__container">
                     <div class="page-headline text-center">
-                        <h2>Feedback</h2>
-                        <p class="lead measure-lead mx-auto text-70">What other students turned professionals have to say about us after learning with us and reaching their goals.</p>
+                        <h2>Tanggapan</h2>
+                        <p class="lead measure-lead mx-auto text-70">Berikut Tanggapan Para Mahasiswa setelah Menggunakan Website Learning Tellme Basdat ini sebagai Pembelajaran matakuliah Database. </p>
                     </div>
 
                     <div class="position-relative carousel-card">
@@ -1034,14 +1068,14 @@
                                 <div class="col-12 col-md-6">
                                     <div class="card card--elevated card-body">
                                         <blockquote class="mb-0">
-                                            <p class="text-70">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio reiciendis iusto id, doloribus optio soluta laborum nobis dolor tempore velit porro maiores eveniet voluptas officia ipsa magnam aliquam. Perferendis?</p>
+                                            <p class="text-70">Website Learning Tellme Basdat ini sangat memudahkan saya dalam mempelajari matakuliah database </p>
 
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <img src="<?php echo base_url ('assets/tealdark/images/people/110/guy-1.jpg')?>" width="40" alt="avatar" class="rounded-circle">
+                                                    <img src="<?php echo base_url ('assets/tealdark/images/people/110/kami.jpg')?>" width="40" alt="avatar" class="rounded-circle">
                                                 </div>
                                                 <div class="media-body media-middle">
-                                                    <p class="mb-0"><a href="" class="text-body"><strong>Umberto Kass</strong></a></p>
+                                                    <p class="mb-0"><a href="" class="text-body"><strong>Sintia Aprilia</strong></a></p>
                                                     <div class="rating">
                                                         <span class="rating__item"><span class="material-icons">star</span></span>
                                                         <span class="rating__item"><span class="material-icons">star</span></span>
@@ -1058,14 +1092,14 @@
                                 <div class="col-12 col-md-6">
                                     <div class="card card--elevated card-body">
                                         <blockquote class="mb-0">
-                                            <p class="text-70">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio reiciendis iusto id, doloribus optio soluta laborum nobis dolor tempore velit porro maiores eveniet voluptas officia ipsa magnam aliquam. Perferendis?</p>
+                                            <p class="text-70">terdapat banyak fitur-fitur yang menarik, dan terdapat soal-soal tingkatan atau level pada saat kita mengerjakan level tersebut akan naik </p>
 
                                             <div class="media">
                                                 <div class="media-left">
-                                                    <img src="<?php echo base_url ('assets/tealdark/images/people/110/guy-2.jpg')?>" width="40" alt="avatar" class="rounded-circle">
+                                                    <img src="<?php echo base_url ('assets/tealdark/images/people/110/kmi 2.jpg')?>" width="40" alt="avatar" class="rounded-circle">
                                                 </div>
                                                 <div class="media-body media-middle">
-                                                    <p class="mb-0"><a href="" class="text-body"><strong>Umberto Kass</strong></a></p>
+                                                    <p class="mb-0"><a href="" class="text-body"><strong>Putri Ratna</strong></a></p>
                                                     <div class="rating">
                                                         <span class="rating__item"><span class="material-icons">star</span></span>
                                                         <span class="rating__item"><span class="material-icons">star</span></span>
@@ -1078,13 +1112,20 @@
                                         </blockquote>
                                     </div>
                                 </div>
-
+                                <div>
+                                <a href="facebook.com"><img src="https://www.facebook.com/jtipolije/asset/tealdark/images/icon/footer/facebook-square@2x.png"></a>
+                                </div>
+                                <!-- <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
+                                    <p class="text-white-70 mb-8pt"><strong>Follow us</strong></p>
+                                    <nav class="nav nav-links nav--flush">
+                                    <a href="#" class="nav-link mr-8pt"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/facebook-square.png')?>" width="30" height="30" alt="Facebook"></a>
+                                    <a href="#" class="nav-link"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/youtube-square.png')?>" width="30" height="30" alt="YouTube"></a>
+                                </div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
 
 
         </div>

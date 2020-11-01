@@ -3,31 +3,29 @@
         <!-- Header Layout Content -->
         <div class="mdk-header-layout__content page-content pb-0">
 
-            <div class="bg-gradient-primary py-32pt">
-              <center><h2 class="text-white"><span class="d-block d-md-inline-block text-scramble js-text-scramble"></span></h2></center>
-                <!-- <div class="container d-flex flex-column flex-md-row align-items-center text-center text-md-left">
-                    <img src="assets/images/illustration/student/128/white.svg" class="mr-md-32pt mb-32pt mb-md-0" alt="student">
-                    <div class="flex mb-32pt mb-md-0">
+           <div class="bg-gradient-primary py-5">
+                <div class="container text-center">
+                    <div class="text-center mb-md-0">
+                        <img class="navbar-brand-icon" src="assets/tealdark/images/illustration/student/128/white.svg" width="100">
                         <h1 class="text-white mb-0">Sign In</h1>
-                        <p class="lead measure-lead text-white-50">Account Management</p>
+                        <center> <p class="text-white mb-0">Account Management</p> </center>
                     </div>
-                    <a href="signup.html" class="btn btn-outline-white flex-column">
+                    <!-- <a href="signup.html" class="btn btn-outline-white flex-column">
                         Don't have an account?
                         <span class="btn__secondary-text">Sign up Today!</span>
-                    </a>
-                </div> -->
+                    </a> -->
+                </div>
             </div>
             <div class=" pt-32pt pt-sm-64pt pb-32pt">
                 <div class="container page__container">
-                  <div class="flex mb-32pt mb-md-0">
-                  <img src="<?php echo base_url('assets/tealdark/images/illustration/student/128/white.svg')?>" class="mr-md-32pt mb-32pt mb-md-0" alt="student">
-                      <center> <h1 class="text-white mb-0">Sign In</h1> </center>
-                      <center> <p class="lead measure-lead text-white-50">Account Management</p> </center>
-                  </div>
+                  <!-- <div class="flex mb-32pt mb-md-0">
+                      <center><h1 class="text-black mb-0">Sign In</h1></center>
+                      <center> <p class="lead measure-lead text-black-50">Account Management</p> </center>
+                  </div> -->
                   <div class="text-center">
                     <span style="color:red;font-style:italic;font-weight:bold;"><?php echo $this->session->flashdata('msg'); ?></span>
                   </div>
-                    <form action="<?php echo base_url('Login/auth')?>" class="col-md-5 p-0 mx-auto" method="post">
+                    <form action="<?php echo base_url('LoginPegawai/auth')?>" class="col-md-5 p-0 mx-auto" method="post">
                         <div class="form-group">
                             <label for="username">Username:</label>
                             <input id="username" name="tm_login_username" type="text" class="form-control" placeholder="Your Username ...">
