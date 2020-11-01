@@ -48,8 +48,8 @@
     </div> -->
     <div class="bg-footer page-section py-lg-32pt">
         <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
+            <!-- <div class="row"> -->
+                <!-- <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
                     <p class="text-white-70 mb-8pt"><strong>Follow us</strong></p>
                     <nav class="nav nav-links nav--flush">
                         <a href="#" class="nav-link mr-8pt"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/facebook-square.png')?>" width="30" height="30" alt="Facebook"></a>

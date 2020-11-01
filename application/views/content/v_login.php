@@ -1,7 +1,7 @@
 <?php $this->load->view("templates/head.php") ?>
 <?php $this->load->view("templates/header.php") ?>
-        <!-- Header Layout Content -->
-        <div class="mdk-header-layout__content page-content pb-0">
+<!-- Header Layout Content -->
+<div class="mdk-header-layout__content page-content pb-0">
 
            <div class="bg-gradient-primary py-5">
                 <div class="container text-center">
@@ -41,8 +41,24 @@
                     </form>
                 </div>
             </div>
+            <form action="<?php echo base_url('Login/auth') ?>" class="col-md-5 p-0 mx-auto" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input id="username" name="tm_login_username" type="text" class="form-control" placeholder="Your Username ...">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input id="password" type="password" name="tm_login_password" class="form-control" placeholder="Your password ...">
+                    <p class="text-right"><a href="<?= base_url('auth/lupa_password') ?>" class="small">Forgot your password?</a></p>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-lg btn-accent">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
 
-            <!-- <div class="page-separator m-0">
+    <!-- <div class="page-separator m-0">
                 <div class="page-separator__text">or sign-in with</div>
                 <div class="page-separator__bg-top "></div>
             </div>
@@ -54,8 +70,8 @@
                 </div>
             </div> -->
 
-        </div>
-        <!-- // END Header Layout Content -->
+</div>
+<!-- // END Header Layout Content -->
 
 <?php $this->load->view("templates/footer.php") ?>
 <?php $this->load->view("templates/js.php") ?>
