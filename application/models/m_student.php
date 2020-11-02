@@ -6,4 +6,18 @@ class m_student extends CI_Model{
 		return $query;
 	}
 
+	function edit_data_mahasiswa($where,$table){
+		return $this->db->get_where($table,$where);
+	}
+
+	function view_profile($id){
+			$query=$this->db->query("SELECT * from tm_mahasiswa WHERE tm_mahasiswa_id='$id' ");
+			return $query;
+	}
+
+	function update_data_mahasiswa($where,$data,$table){
+		$this->db->where($where);
+		$this->db->update($table,$data);
+	}
+
 }

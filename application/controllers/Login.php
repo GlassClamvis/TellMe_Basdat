@@ -35,6 +35,7 @@ class Login extends CI_Controller {
 					$this->session->set_userdata('id',$data['tm_login_id']);
 					$this->session->set_userdata('username',$data['tm_login_username']);
 					$this->session->set_userdata('user_id',$data['tm_user_access_id']);
+					$this->session->set_userdata('id_mahasiswa',$data['tm_mahasiswa_id']);
 					$this->session->set_userdata('nim_mahasiswa',$data['tm_mahasiswa_nim']);
 					$this->session->set_userdata('nama_mahasiswa',$data['tm_mahasiswa_nama']);
 					$this->session->set_userdata('jurusan_mahasiswa',$data['tm_mahasiswa_jurusan']);
@@ -51,28 +52,7 @@ class Login extends CI_Controller {
 					echo $this->session->set_flashdata('msg','Username Atau Password Salah');
 					redirect($url);
 			}
-}
-			// 		$data=$cek_login->row_array();
-			// if($cek_login->num_rows() > 0){ //jika login sebagai mahasiswa
-      //   	$this->session->set_userdata('masuk',TRUE);
-			// 		if($data['tm_user_access_id']=='1'){
-		  //     	$this->session->set_userdata('id',$data['tm_login_id']);
-			// 			$this->session->set_userdata('username',$data['tm_login_username']);
-			// 			$this->session->set_userdata('user_id',$data['tm_user_access_id']);
-		  //     	redirect('teacher');
-			//
-			// 		}else{
-		  //     	$this->session->set_userdata('id',$data['tm_login_id']);
-			// 			$this->session->set_userdata('username',$data['tm_login_username']);
-			// 			$this->session->set_userdata('user_id',$data['tm_user_access_id']);
-		  //     	redirect('student');
-			// 		}
-			//
-			// }else{  // jika username dan password tidak ditemukan atau salah
-			// 		$url=base_url('login');
-			// 	  echo $this->session->set_flashdata('msg','Username Atau Password Salah');
-			// 		redirect($url);
-		  // }
+		}
 
     function logout(){
         $this->session->sess_destroy();
@@ -80,6 +60,29 @@ class Login extends CI_Controller {
         redirect($url);
     }
 }
+
+
+	// 		$data=$cek_login->row_array();
+	// if($cek_login->num_rows() > 0){ //jika login sebagai mahasiswa
+	//   	$this->session->set_userdata('masuk',TRUE);
+	// 		if($data['tm_user_access_id']=='1'){
+	//     	$this->session->set_userdata('id',$data['tm_login_id']);
+	// 			$this->session->set_userdata('username',$data['tm_login_username']);
+	// 			$this->session->set_userdata('user_id',$data['tm_user_access_id']);
+	//     	redirect('teacher');
+	//
+	// 		}else{
+	//     	$this->session->set_userdata('id',$data['tm_login_id']);
+	// 			$this->session->set_userdata('username',$data['tm_login_username']);
+	// 			$this->session->set_userdata('user_id',$data['tm_user_access_id']);
+	//     	redirect('student');
+	// 		}
+	//
+	// }else{  // jika username dan password tidak ditemukan atau salah
+	// 		$url=base_url('login');
+	// 	  echo $this->session->set_flashdata('msg','Username Atau Password Salah');
+	// 		redirect($url);
+	// }
 
 // function auth(){
 //   echo "CAPTAIN HERE";
