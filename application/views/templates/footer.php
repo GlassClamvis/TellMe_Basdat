@@ -526,11 +526,11 @@
                                               </span>
                                           </a>
                                         </div>
-                                        <form action="<?= base_url('auth/ubahPassword'); ?>">
+                                        <!-- <form action="< base_url('auth/ubahPassword'); ?>">
                                           <div class="text-center">
                                               <button type="submit" class="btn btn-accent btn-lg">Reset Password</button>
                                           </div>
-                                        </form>
+                                        </form> -->
 
 
                                 </div>

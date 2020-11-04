@@ -10,13 +10,13 @@ class level extends CI_Controller
     public function index()
     {
         $data['level']     = $this->m_topik->tampil_level()->result();
-        $this->load->view('admin/level/tampil_level', $data);
+        $this->load->view('content/pegawai/admin/level/tampil_level', $data);
     }
 
     public function tambah_level()
     {
         $data['level']     = $this->m_topik->tampil_level()->result();
-        $this->load->view('admin/level/tambah_level', $data);
+        $this->load->view('content/pegawai/admin/level/tambah_level', $data);
     }
 
     public function generate_level()
@@ -50,7 +50,7 @@ class level extends CI_Controller
     {
         $where = array('tm_level_id' => $tm_level_id);
         $data['level'] = $this->m_topik->edit_topik($where, 'tm_level')->result();
-        $this->load->view('Admin/level/update_level', $data);
+        $this->load->view('content/pegawai/Admin/level/update_level', $data);
     }
     public function hapus($tm_level_id)
     {

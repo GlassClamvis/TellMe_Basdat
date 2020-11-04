@@ -36,7 +36,7 @@
 
                     <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
                         <li class="d-inline d-sm-flex nav-item">
-                            <a href="<?php echo base_url('LoginPegawai')?>" class="btn btn-accent">LOGIN</a>
+                            <a href="<?php echo base_url('Login')?>" class="btn btn-accent">LOGIN</a>
                         </li>
                     </ul>
 

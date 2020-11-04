@@ -12,13 +12,13 @@ class Student extends CI_Controller{
   }
 
   function index(){
-    $this->template->student('v_student');
+    $this->load->view('content/mahasiswa/v_mahasiswa');
   }
 
   public function edit(){
       $where = $this->session->userdata('id_mahasiswa');
       $data['mahasiswa'] = $this->m_student->view_profile($where, 'tm_mahasiswa')->result();
-      $this->load->view('content/v_update_mahasiswa',$data);
+      $this->load->view('content/mahasiswa/v_update_mahasiswa',$data);
       //$where = $this->session->userdata('id_mahasiswa');
       //echo $where;
   }
@@ -26,7 +26,7 @@ class Student extends CI_Controller{
   public function edit_foto(){
       $where = $this->session->userdata('id_mahasiswa');
       $data['mahasiswa'] = $this->m_student->view_profile($where, 'tm_mahasiswa')->result();
-      $this->load->view('content/v_photo_mahasiswa',$data);
+      $this->load->view('content/mahasiswa/v_photo_mahasiswa',$data);
       //$where = $this->session->userdata('id_mahasiswa');
       //echo $where;
   }
@@ -64,7 +64,7 @@ class Student extends CI_Controller{
       );
 
       $this->m_student->update_data_mahasiswa($where,$data,'tm_mahasiswa');
-      redirect(base_url('student'));
+      redirect(base_url('Mahasiswa/Student'));
   }
 
   public function upload_foto(){
@@ -99,7 +99,7 @@ class Student extends CI_Controller{
             $this->m_student->update_data_mahasiswa($data,$where);
         }
       }
-      redirect(base_url('student'));
+      redirect(base_url('Mahasiswa/Student'));
   }
 
 }

@@ -47,12 +47,12 @@
                             <div class="dropdown-menu dropdown-menu-right">
 
                                 <div class="dropdown-header"><strong>Student</strong></div>
-                                <a class="dropdown-item" href="<?php echo base_url('student') ?>">Dashboard</a>
+                                <a class="dropdown-item" href="<?php echo base_url('Student') ?>">Dashboard</a>
                                 <a class="dropdown-item" href="student-my-courses.html">My Courses</a>
                                 <a class="dropdown-item" href="student-quiz-results.html">Quiz Results</a>
                                 <div class="dropdown-divider"></div>
                                 <div class="dropdown-header"><strong>Akun</strong></div>
-                                <a class="dropdown-item" href="<?php echo base_url('student/edit/'.$_SESSION['id_mahasiswa']); ?>">Edit Profil</a>
+                                <a class="dropdown-item" href="<?php echo base_url('Mahasiswa/Student/edit/'.$_SESSION['id_mahasiswa']); ?>">Edit Profil</a>
                                 <!-- <a class="dropdown-item" href="student-billing.html">Billing</a>
                                 <a class="dropdown-item" href="student-billing-history.html">Payments</a> -->
                                 <a class="dropdown-item" href="<?php echo base_url('login/logout')?>">Logout</a>
@@ -195,7 +195,7 @@
                             <ul class="nav navbar-nav">
 
                                 <li class="nav-item">
-                                    <a href="<?php echo base_url('student') ?>" class="nav-link">Dashboard</a>
+                                    <a href="<?php echo base_url('Student') ?>" class="nav-link">Dashboard</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="student-my-courses.html" class="nav-link">Courses</a>

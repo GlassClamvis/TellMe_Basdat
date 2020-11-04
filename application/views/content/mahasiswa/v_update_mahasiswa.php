@@ -7,7 +7,7 @@
   foreach ($mahasiswa as $data_mahasiswa) { ?>
 
     <div class="container page__container">
-        <form method="post" name="edit_data_mahasiswa" action="<?php echo base_url('student/update'); ?>">
+        <form method="post" name="edit_data_mahasiswa" action="<?php echo base_url('Mahasiswa/Student/update'); ?>">
             <div class="row">
                 <div class="col-lg-9">
 
@@ -80,8 +80,8 @@
                 <div class="col-lg-3 page-nav">
                     <div class="page-section pt-lg-112pt">
                         <nav class="nav page-nav__menu">
-                            <a class="nav-link active" href="<?php echo base_url('student/edit/'.$_SESSION['id_mahasiswa']); ?>">Basic Information</a>
-                            <a class="nav-link" href="<?php echo base_url('student/edit_foto/'.$_SESSION['id_mahasiswa']); ?>">Photo Profile</a>
+                            <a class="nav-link active" href="<?php echo base_url('Mahasiswa/Student/edit/'.$_SESSION['id_mahasiswa']); ?>">Basic Information</a>
+                            <a class="nav-link" href="<?php echo base_url('Mahasiswa/Student/edit_foto/'.$_SESSION['id_mahasiswa']); ?>">Photo Profile</a>
                             <a class="nav-link" href="student-edit-account-password.html">Change Password</a>
                         </nav>
                         <div class="page-nav__content">

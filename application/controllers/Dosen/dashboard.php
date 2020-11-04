@@ -1,5 +1,5 @@
 <?php
-class dashboard extends CI_Controller{
+class Dashboard extends CI_Controller{
   function __construct(){
     parent::__construct();
 
@@ -16,7 +16,7 @@ class dashboard extends CI_Controller{
     $query_pegawai_id = $query['tm_pegawai_id'];
     $pegawai = $this->db->get_where('tm_pegawai', ['tm_pegawai_id' => $query_pegawai_id])->row_array();
     $data['pegawai_nama'] = $pegawai['tm_pegawai_nama'];
-    $this->load->view("Dosen/dashboard", $data);
+    $this->load->view("content/pegawai/Dosen/dashboard", $data);
   }
 
 }

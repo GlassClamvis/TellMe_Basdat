@@ -25,7 +25,7 @@
                   <div class="text-center">
                     <span style="color:red;font-style:italic;font-weight:bold;"><?php echo $this->session->flashdata('msg'); ?></span>
                   </div>
-                    <form action="<?php echo base_url('LoginPegawai/auth')?>" class="col-md-5 p-0 mx-auto" method="post">
+                    <form action="<?php echo base_url('Login/auth')?>" class="col-md-5 p-0 mx-auto" method="post">
                         <div class="form-group">
                             <label for="username">Username:</label>
                             <input id="username" name="tm_login_username" type="text" class="form-control" placeholder="Your Username ...">
@@ -41,20 +41,6 @@
                     </form>
                 </div>
             </div>
-            <form action="<?php echo base_url('Login/auth') ?>" class="col-md-5 p-0 mx-auto" method="post">
-                <div class="form-group">
-                    <label for="username">Username:</label>
-                    <input id="username" name="tm_login_username" type="text" class="form-control" placeholder="Your Username ...">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <input id="password" type="password" name="tm_login_password" class="form-control" placeholder="Your password ...">
-                    <p class="text-right"><a href="<?= base_url('auth/lupa_password') ?>" class="small">Forgot your password?</a></p>
-                </div>
-                <div class="text-center">
-                    <button class="btn btn-lg btn-accent">Login</button>
-                </div>
-            </form>
         </div>
     </div>
 

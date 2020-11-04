@@ -1,5 +1,5 @@
 <?php
-class Admin_model extends CI_Model{
+class model_admin extends CI_Model{
 
 function cek_login($table,$where){
        return $this->db->get_where($table,$where);

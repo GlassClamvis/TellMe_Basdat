@@ -1,5 +1,5 @@
 <?php
-class dashboard extends CI_Controller
+class Dashboard extends CI_Controller
 {
   function __construct()
   {
@@ -28,9 +28,9 @@ class dashboard extends CI_Controller
     // var_dump($data['pegawai']);
     // die;
 
-    $this->load->view('adminlte/h_admin.php', $data);
-    $this->load->view("adminlte/d_admin.php");
-    $this->load->view("adminlte/s_admin.php");
-    $this->load->view("adminlte/f_admin.php");
+    $this->load->view('content/pegawai/adminlte/h_admin.php', $data);
+    $this->load->view("content/pegawai/adminlte/d_admin.php");
+    $this->load->view("content/pegawai/adminlte/s_admin.php");
+    $this->load->view("content/pegawai/adminlte/f_admin.php");
   }
 }

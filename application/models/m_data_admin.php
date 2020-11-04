@@ -1,6 +1,6 @@
-<?php 
-class data_admin_model extends CI_model{
-    
+<?php
+class m_data_admin extends CI_model{
+
     function getAll(){
         $this->db->select('*');
         $this->db->from('tm_pegawai');
@@ -27,9 +27,9 @@ class data_admin_model extends CI_model{
     }
 
     function max_data(){
-        $query = $this->db->query("SELECT MAX(tm_pegawai_id) as max_id FROM tm_pegawai"); 
+        $query = $this->db->query("SELECT MAX(tm_pegawai_id) as max_id FROM tm_pegawai");
          $row = $query->row_array();
-        $max_id = $row['max_id']; 
+        $max_id = $row['max_id'];
 
         // $this->db->select_max('tm_pegawai_id');
         // $query = $this->db->get('tm_pegawai');

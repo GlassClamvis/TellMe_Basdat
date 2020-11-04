@@ -23,11 +23,22 @@ class Login extends CI_Controller {
 			if($cek_pegawai->num_rows() > 0){ //jika login sebagai dosen
 					$data=$cek_pegawai->row_array();
 					$this->session->set_userdata('masuk',TRUE);
+					if($data['tm_staff_id']=='1'){
 					$this->session->set_userdata('id',$data['tm_login_id']);
 					$this->session->set_userdata('username',$data['tm_login_username']);
 					$this->session->set_userdata('user_id',$data['tm_user_access_id']);
-					$this->session->set_userdata('nama_pegawai',$data['tm_pegawai_nama']);
-					redirect('teacher');
+					redirect('Admin/Dashboard');
+				}elseif($data['tm_staff_id']=='2'){
+					$this->session->set_userdata('id',$data['tm_login_id']);
+					$this->session->set_userdata('username',$data['tm_login_username']);
+					$this->session->set_userdata('user_id',$data['tm_user_access_id']);
+					redirect('Teknisi/Dashboard');
+				}else{
+					$this->session->set_userdata('id',$data['tm_login_id']);
+					$this->session->set_userdata('username',$data['tm_login_username']);
+					$this->session->set_userdata('user_id',$data['tm_user_access_id']);
+					redirect('Dosen/Dashboard');
+				}
 
 			}elseif($cek_mahasiswa->num_rows() > 0){
 					$data=$cek_mahasiswa->row_array();
@@ -44,8 +55,7 @@ class Login extends CI_Controller {
 					$this->session->set_userdata('tgl_mahasiswa',$data['tm_mahasiswa_tanggal_lahir']);
 					$this->session->set_userdata('email_mahasiswa',$data['tm_mahasiswa_email']);
 					$this->session->set_userdata('point_mahasiswa',$data['tm_mahasiswa_point']);
-
-					redirect('student');
+					redirect('Mahasiswa/Student');
 
 			}else{  // jika username dan password tidak ditemukan atau salah
 					$url=base_url('login');
