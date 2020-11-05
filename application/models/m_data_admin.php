@@ -1,6 +1,6 @@
-<?php
+<?php 
 class m_data_admin extends CI_model{
-
+    
     function getAll(){
         $this->db->select('*');
         $this->db->from('tm_pegawai');
@@ -27,12 +27,68 @@ class m_data_admin extends CI_model{
     }
 
     function max_data(){
-        $query = $this->db->query("SELECT MAX(tm_pegawai_id) as max_id FROM tm_pegawai");
+        $query = $this->db->query("SELECT MAX(tm_pegawai_id) as max_id FROM tm_pegawai"); 
          $row = $query->row_array();
-        $max_id = $row['max_id'];
+        $max_id = $row['max_id']; 
 
         // $this->db->select_max('tm_pegawai_id');
         // $query = $this->db->get('tm_pegawai');
         return $max_id;
+    }
+
+    function jum_admin(){   
+        $this->db->select('*');
+        $this->db->from('tm_pegawai');
+        $this->db->where('tm_staff_id = 1');
+        $query = $this->db->get();
+        if($query->num_rows()>0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    function jum_teknisi(){   
+        $this->db->select('*');
+        $this->db->from('tm_pegawai');
+        $this->db->where('tm_staff_id = 2');
+        $query = $this->db->get();
+        if($query->num_rows()>0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    function jum_dosen(){   
+        $this->db->select('*');
+        $this->db->from('tm_pegawai');
+        $this->db->where('tm_staff_id = 3');
+        $query = $this->db->get();
+        if($query->num_rows()>0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    function jum_mahasiswa(){   
+        $this->db->select('*');
+        $this->db->from('tm_mahasiswa');
+        $query = $this->db->get();
+        if($query->num_rows()>0)
+        {
+            return $query->num_rows();
+        }
+        else
+        {
+            return 0;
+        }
     }
 }

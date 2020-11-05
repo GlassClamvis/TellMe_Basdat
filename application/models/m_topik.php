@@ -15,6 +15,10 @@ class m_topik extends CI_Model
     {
         return $this->db->get('tm_topik');
     }
+    public function tampil_trial_topik()
+    {
+        return $this->db->get('tm_trial_topik');
+    }
 
     function tambah_data($data, $table)
     {
