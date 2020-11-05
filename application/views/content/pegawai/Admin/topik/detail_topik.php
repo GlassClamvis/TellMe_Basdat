@@ -33,8 +33,12 @@
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
-                            <a class="btn btn-danger btn-sm mb-4" href="<?php echo base_url('admin/topik/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a>
-                            <a class="btn btn-sm btn-primary mb-4" href="<?php echo base_url('admin/topik/tambah_sub_topik') ?>"><i class="fas fa-plus fa-sm"></i>Tambah Sub Topik</a>
+                            <div class="text-left py-0 align-middle">
+                                <a class="btn btn-danger btn-flat mb-4" href="<?php echo base_url('admin/topik/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                                <a class="btn btn-flat btn-success mb-4" href="<?php echo base_url('admin/topik/tambah_sub_topik') ?>"><i class="fas fa-plus-square fa-sm"></i> Sub Topik </a>
+                            </div>
+
+
                             <table id="example2" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
@@ -59,7 +63,9 @@
                                             <td class="text-right py-0 align-middle">
                                                 <a><?php echo anchor('admin/topik/detail_sub_topik/' . $sub_tpk->td_sub_topik_id, '<div class="btn btn-success btn-sm"><i class="fas fa-search-plus"></i></div>') ?></a>
                                                 <a><?php echo anchor('admin/topik/edt_sub_topik/' . $sub_tpk->td_sub_topik_id, '<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>') ?></a>
-                                                <a><?php echo anchor('admin/topik/delete_data_sub_topik/' . $sub_tpk->td_sub_topik_id, '<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>') ?></a>
+                                                <a data-toggle="modal" data-target="#hapus">
+                                                    <div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>
+                                                </a>
                                             </td>
                                         </tr>
                                     <?php } ?>
@@ -82,6 +88,25 @@
             </div>
     </section>
     <!-- /.content -->
+    <div class="modal fade" id="hapus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Hapus Data</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Apakah Anda ingin Menghapus Data Ini ?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-times-circle"></i></button>
+                    <a><?php echo anchor('admin/topik/delete_data_sub_topik/' . $sub_tpk->td_sub_topik_id, '<div class="btn btn-success"><i class="fas fa-check"></i></div>') ?></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <?php $this->load->view("adminlte/s_admin.php") ?>
     <?php $this->load->view("adminlte/f_admin.php") ?>

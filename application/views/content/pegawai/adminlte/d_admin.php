@@ -18,6 +18,65 @@
             <!-- /.content-header -->
             <!-- Main content -->
             <section class="content">
+              <div class="row">
+            <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?php echo $jum_adm; ?></h3>
+
+                <p>Admin</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <a href="<?php echo base_url('Admin/DataPegawai/Data_admin/index')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?php echo $jum_adm; ?></h3>
+
+                <p>Teknisi</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <a href="<?php echo base_url('Admin/DataPegawai/Data_teknisi/index')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?php echo $jum_adm; ?></h3>
+
+                <p>Dosen</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <a href="<?php echo base_url('Admin/DataPegawai/Data_dosen/index')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?php echo $jum_mhs; ?></h3>
+
+                <p>Mahasiswa</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <a href="<?php echo base_url('Admin/DataMahasiswa/Data_mhs/index')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+              </div>
+          
             </section>
             <!-- /.content -->
         </div>

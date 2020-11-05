@@ -57,7 +57,7 @@
                                         <tr>
                                             <th>ID Pegawai</th>
                                             <td>
-                                                <?php echo $detail_sub_topik->tm_pegawai_id ?>
+                                                <?php echo $detail_sub_topik->tm_pegawai_id ?>. <?php echo $this->session->userdata('nama_peg'); ?>
                                             </td>
                                         </tr>
                                         <tr>
@@ -69,9 +69,8 @@
                                     </table>
                                 </div>
                             </div>
-                            <a class="btn btn-danger btn-sm" href="<?php echo base_url('admin/topik/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a>
+                            <a class="btn btn-danger btn-flat   " href="<?php echo base_url('admin/topik/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                         </div>
-
                     </div>
                 </div>
             </div>

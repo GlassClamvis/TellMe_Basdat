@@ -33,7 +33,6 @@
                         </div>
                         <div class="card-body bg-light">
                             <div class="row">
-
                                 <div class="container">
                                     <form class="form-horizontal" action="<?php echo base_url() . 'Admin/topik/generate_topik'; ?>" method="post" enctype="multipart/form-data">
                                         <div class="form-row">
@@ -53,17 +52,15 @@
 
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
-                                                <label>ID Pegawai</label>
-                                                <select name="tm_pegawai_id" class="form-control select2bs4" style="width: 100%;">
-                                                    <?php foreach ($staff as $pgw) : ?>
-                                                        <option value="<?php echo $pgw->tm_pegawai_id ?>"><?php echo $pgw->tm_pegawai_nama ?></option>
-                                                    <?php endforeach; ?>
-                                                </select>
+                                                <?php $a = $this->session->userdata('id_peg');
+                                                $b = $this->session->userdata('nama_peg');
+                                                ?>
+                                                <input type="hidden" value="<?php echo $a ?>" name="tm_pegawai_id" class="form-control" placeholder="Nama pegawai" required>
                                             </div>
 
                                         </div>
-                                        <a class="btn btn-danger btn-md" href="<?php echo base_url('admin/topik/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i>Cancel</a>
-                                        <button type="submit" class="btn btn-success btn-md"><i class=" fas fa-plus fa-sm"></i>Save</button>
+                                        <a class="btn btn-danger btn-flat" href="<?php echo base_url('admin/topik/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                                        <button type="submit" class="btn btn-success swalDefaultSuccess btn-flat"><i class=" fas fa-plus fa-sm"></i> Save </button>
                                     </form>
                                 </div>
                             </div>

@@ -6,7 +6,7 @@ class Data_admin extends CI_Controller
     {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
-        $this->load->model('m_data_admin');
+        $this->load->model('data_admin_model');
     }
 
     public function index()
@@ -20,10 +20,10 @@ class Data_admin extends CI_Controller
         $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
         ///////////////////////////////////////////////////////////////////
         $data['tm_pegawai'] = $this->db->query('SELECT tm_pegawai_id, tm_pegawai_nip, tm_login_password, tm_pegawai_nama, tm_pegawai_email, tm_pegawai_no_telp, tm_pegawai_alamat, tm_pegawai_foto, tm_staff_label FROM tm_pegawai INNER JOIN tm_login USING(tm_pegawai_id) INNER JOIN tm_staff USING (tm_staff_id) WHERE tm_staff_id = 1')->result();
-        $this->load->view('content/pegawai/adminlte/h_admin.php', $data);
-        $this->load->view('content/pegawai/Admin/crud/data_admin', $data);
-        $this->load->view("content/pegawai/adminlte/s_admin.php");
-        $this->load->view("content/pegawai/adminlte/f_admin.php");
+        $this->load->view('adminlte/h_admin.php', $data);
+        $this->load->view('Admin/crud/data_admin', $data);
+        $this->load->view("adminlte/s_admin.php");
+        $this->load->view("adminlte/f_admin.php");
     }
 
     public function edit($tm_pegawai_id)
@@ -33,12 +33,12 @@ class Data_admin extends CI_Controller
         $data1['pegawai'] = $this->db->get('tm_pegawai')->row_array();
         ///////////////////////////////////////////////////////////////
         $where = array('tm_pegawai_id' => $tm_pegawai_id);
-        $data['pegawai'] = $this->m_data_admin->edit_data($where, 'tm_pegawai JOIN tm_login USING(tm_pegawai_id) JOIN tm_staff USING(tm_staff_id)')->result();
+        $data['pegawai'] = $this->data_admin_model->edit_data($where, 'tm_pegawai JOIN tm_login USING(tm_pegawai_id) JOIN tm_staff USING(tm_staff_id)')->result();
 
-        $this->load->view('content/pegawai/adminlte/h_admin.php', $data1);
-        $this->load->view('content/pegawai/Admin/crud/edit_admin', $data);
-        $this->load->view("content/pegawai/adminlte/s_admin.php");
-        $this->load->view("content/pegawai/adminlte/f_admin.php");
+        $this->load->view('adminlte/h_admin.php', $data1);
+        $this->load->view('Admin/crud/edit_admin', $data);
+        $this->load->view("adminlte/s_admin.php");
+        $this->load->view("adminlte/f_admin.php");
     }
 
     public function hapus($tm_pegawai_id)
@@ -48,7 +48,7 @@ class Data_admin extends CI_Controller
         $path = './upload/';
 
         $where = array('tm_pegawai_id' => $tm_pegawai_id);
-        $this->m_data_admin->hapus_data($where, 'tm_pegawai');
+        $this->data_admin_model->hapus_data($where, 'tm_pegawai');
 
         @unlink($path . $data['tm_pegawai_foto']);
 
@@ -100,8 +100,8 @@ class Data_admin extends CI_Controller
                     'tm_login_id' => $tm_login_id
                 );
 
-                $this->m_data_admin->update_data($where, $data, 'tm_pegawai');
-                $this->m_data_admin->update_data($where1, $data1, 'tm_login');
+                $this->data_admin_model->update_data($where, $data, 'tm_pegawai');
+                $this->data_admin_model->update_data($where1, $data1, 'tm_login');
 
                 // hapus foto pada direktori
                 @unlink($path . $this->input->post('filelama'));
@@ -141,7 +141,7 @@ class Data_admin extends CI_Controller
                     'tm_staff_id' => $this->input->post('tm_staff_id')
                 );
 
-                $this->m_data_admin->input_data($data, 'tm_pegawai'); //akses model untuk menyimpan ke database
+                $this->data_admin_model->input_data($data, 'tm_pegawai'); //akses model untuk menyimpan ke database
 
                 //pesan yang muncul jika berhasil diupload pada session flashdata
                 $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Upload gambar berhasil !!</div></div>");
@@ -168,7 +168,7 @@ class Data_admin extends CI_Controller
             'tm_user_access_id' => $tm_user_access_id
         );
 
-        $this->m_data_admin->input_data($data, 'tm_login');
+        $this->data_admin_model->input_data($data, 'tm_login');
         redirect('Admin/DataPegawai/Data_admin/index');
     }
 
@@ -178,10 +178,10 @@ class Data_admin extends CI_Controller
         $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
         $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
         //menampilkan tambah_mahasiswa
-        $this->load->view('content/pegawai/adminlte/h_admin.php', $data);
-        $this->load->view('content/pegawai/Admin/crud/tambah_admin');
-        $this->load->view("content/pegawai/adminlte/s_admin.php");
-        $this->load->view("content/pegawai/adminlte/f_admin.php");
+        $this->load->view('adminlte/h_admin.php', $data);
+        $this->load->view('Admin/crud/tambah_admin');
+        $this->load->view("adminlte/s_admin.php");
+        $this->load->view("adminlte/f_admin.php");
     }
 
     public function tambah2()
@@ -190,13 +190,13 @@ class Data_admin extends CI_Controller
         $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
         $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
         //menampilkan tambah_mahasiswa
-        $data['tm_pegawai'] = $this->m_data_admin->max_data();
+        $data['tm_pegawai'] = $this->data_admin_model->max_data();
         // $data['tm_pegawai']=$this->db->query('SELECT MAX(tm_pegawai_id) FROM tm_pegawai')->result();
-
-        $this->load->view('content/pegawai/adminlte/h_admin.php', $data);
-        $this->load->view('content/pegawai/Admin/crud/tambah_admin_2', $data);
-        $this->load->view("content/pegawai/adminlte/s_admin.php");
-        $this->load->view("content/pegawai/adminlte/f_admin.php");
+        
+        $this->load->view('adminlte/h_admin.php', $data);
+        $this->load->view('Admin/crud/tambah_admin_2', $data);
+        $this->load->view("adminlte/s_admin.php");
+        $this->load->view("adminlte/f_admin.php");
     }
 
     // fungsi untukupload image

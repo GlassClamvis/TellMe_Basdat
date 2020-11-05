@@ -45,13 +45,13 @@
                                                 </div>
                                             </div>
                                             <div class="form-row">
-                                                <div class="form-group col-md-5">
+                                                <div class="form-group col-md-8">
                                                     <label>Sub Topik Content</label>
-                                                    <textarea type="text" name="td_sub_topik_content" value="<?php echo $sub_tpk->td_sub_topik_content ?>" class="form-control" placeholder="Sub Topik Content" required></textarea>
+                                                    <textarea type="text" id="compose-textarea" style="height: 300px" name="td_sub_topik_content" value="<?php echo $sub_tpk->td_sub_topik_content ?>" class="form-control" placeholder="Sub Topik Content" required></textarea>
                                                 </div>
                                             </div>
-                                            <a class="btn btn-danger btn-sm" href="<?php echo base_url('admin/topik/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i>Cancel</a>
-                                            <button type="submit" class="btn btn-success btn-sm"><i class=" fas fa-plus fa-sm"></i>Save</button>
+                                            <a class="btn btn-danger btn-flat" href="<?php echo base_url('admin/topik/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                                            <button type="submit" class="btn btn-success btn-flat"><i class=" fas fa-plus fa-sm"></i>Save</button>
                                         </form>
                                     <?php } ?>
                                 </div>

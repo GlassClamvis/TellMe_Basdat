@@ -11,39 +11,45 @@ class topik extends CI_Controller
     public function index()
     {
         $data['topik'] = $this->m_topik->tampil_topik()->result();
-        $this->load->view('content/pegawai/admin/topik/tampil_topik_sub_topik', $data);
+        $this->load->view('admin/topik/tampil_topik_sub_topik', $data);
+    }
+    public function trial_topik()
+    {
+        $data['trial_topik'] = $this->m_topik->tampil_trial_topik()->result();
+        $this->load->view('admin/topik/tampil_trial_topik', $data);
+    }
+
+    public function tambah_trial_topik()
+    {
+        $data['topik'] = $this->m_topik->tampil_topik()->result();
+        $this->load->view('admin/topik/tambah_trial_topik', $data);
     }
 
     public function tambah_topik()
     {
         $data['topik']     = $this->m_topik->tampil_topik()->result();
-        $data['sub_topik'] = $this->m_topik->tampil_sub_topik()->result();
-        $data['staff']     = $this->m_topik->tampil_pegawai()->result();
         $data['level']     = $this->m_topik->tampil_level()->result();
-        $this->load->view('content/pegawai/admin/topik/tambah_topik', $data);
+        $this->load->view('admin/topik/tambah_topik', $data);
     }
 
     public function tambah_sub_topik()
     {
         $data['topik'] = $this->m_topik->tampil_topik()->result();
-        $data['sub_topik'] = $this->m_topik->tampil_sub_topik()->result();
-        $data['staff'] = $this->m_topik->tampil_pegawai()->result();
-        $data['level'] = $this->m_topik->tampil_level()->result();
-        $this->load->view('content/pegawai/admin/topik/tambah_sub_topik', $data);
+        $this->load->view('admin/topik/tambah_sub_topik', $data);
     }
 
     public function edt_topik()
     {
         $a = $this->uri->segment('4');
         $data['data_hoki'] = $this->m_topik->data_topik($a);
-        $this->load->view('content/pegawai/admin/topik/update_topik', $data);
+        $this->load->view('admin/topik/update_topik', $data);
     }
 
     public function edt_sub_topik()
     {
         $a = $this->uri->segment('4');
         $data['data_sub_hoki'] = $this->m_topik->data_sub_topik($a);
-        $this->load->view('content/pegawai/admin/topik/update_sub_topik', $data);
+        $this->load->view('admin/topik/update_sub_topik', $data);
     }
 
     public function generate_topik()
@@ -126,6 +132,52 @@ class topik extends CI_Controller
         redirect('admin/topik');
     }
 
+    public function generate_trial_topik()
+    {
+        $cek    = $this->db->query("SELECT tm_trial_topik_id from tm_trial_topik ORDER BY tm_trial_topik_id DESC limit 1");
+        $jumlah = $cek->num_rows();
+        foreach ($cek->result() as $ck) {
+            $id_topik = $ck->tm_trial_topik_id;
+        }
+
+        if ($jumlah <> 0) {
+            $kode = intval($id_topik) + 1;
+        } else {
+            $kode = 1;
+        }
+
+        $kodemax = str_pad($kode, 6, "0", STR_PAD_LEFT);
+        $tm_trial_topik_soal      = $this->input->post('tm_trial_topik_soal');
+        $tm_trial_topik_deskripsi      = $this->input->post('tm_trial_topik_deskripsi');
+        $cek    = $this->db->query("SELECT tm_trial_topik_point from tm_trial_topik ORDER BY tm_trial_topik_point DESC limit 1");
+        $jumlah = $cek->num_rows();
+        foreach ($cek->result() as $ck) {
+            $id_poin = $ck->tm_trial_topik_point;
+        }
+
+        if ($jumlah <> 0) {
+            $kode = intval($id_poin) + 1;
+        } else {
+            $kode = 1;
+        }
+
+        $kodemin = str_pad($kode, 6, "0", STR_PAD_LEFT);
+        $tm_topik_id        = $this->input->post('tm_topik_id');
+
+        $data = array(
+
+            'tm_trial_topik_id'        => $kodemax,
+            'tm_trial_topik_soal'      => $tm_trial_topik_soal,
+            'tm_trial_topik_deskripsi' => $tm_trial_topik_deskripsi,
+            'tm_trial_topik_point'     => $kodemin,
+            'tm_topik_id'              => $tm_topik_id,
+
+        );
+
+        $this->m_topik->tambah_data($data, 'tm_trial_topik');
+        redirect('admin/topik/trial_topik/index');
+    }
+
     public function delete_data_topik($id)
     {
         $where = array('tm_topik_id' => $id);
@@ -187,7 +239,7 @@ class topik extends CI_Controller
         $data['sub_topik'] = $this->m_topik->tampil_sub_topik()->result();
         $detail = $this->m_topik->detail_data_topik($tm_topik_id);
         $data['detail_topik'] = $detail;
-        $this->load->view('content/pegawai/admin/topik/detail_topik', $data);
+        $this->load->view('admin/topik/detail_topik', $data);
     }
 
     public function detail_sub_topik($td_sub_topik_id)
@@ -195,6 +247,40 @@ class topik extends CI_Controller
         $this->load->model('m_topik');
         $detail = $this->m_topik->detail_data_sub_topik($td_sub_topik_id);
         $data['detail_sub_topik'] = $detail;
-        $this->load->view('content/pegawai/admin/topik/detail_sub_topik', $data);
+        $this->load->view('admin/topik/detail_sub_topik', $data);
+    }
+
+    public function edit_trial_topik($tm_trial_topik_id)
+    {
+        $where = array('tm_trial_topik_id' => $tm_trial_topik_id);
+        $data['trial_topik'] = $this->m_topik->edit_topik($where, 'tm_trial_topik')->result();
+        $this->load->view('Admin/topik/update_trial_topik', $data);
+    }
+    public function hapus($tm_trial_topik_id)
+    {
+        $where = array('tm_trial_topik_id' => $tm_trial_topik_id);
+        $this->m_topik->delete_data($where, 'tm_trial_topik');
+        redirect('Admin/topik/trial_topik/index');
+    }
+
+    public function update_trial_topik()
+    {
+        $tm_trial_topik_id = $this->input->post('tm_trial_topik_id');
+        $tm_trial_topik_soal = $this->input->post('tm_trial_topik_soal');
+        $tm_trial_topik_deskripsi = $this->input->post('tm_trial_topik_deskripsi');
+
+
+        $data = array(
+
+            'tm_trial_topik_soal' => $tm_trial_topik_soal,
+            'tm_trial_topik_deskripsi' => $tm_trial_topik_deskripsi,
+
+        );
+        $where = array(
+            'tm_trial_topik_id' => $tm_trial_topik_id
+        );
+
+        $this->m_topik->update_data($where, $data, 'tm_level');
+        redirect('Admin/topik/trial_topikindex');
     }
 }

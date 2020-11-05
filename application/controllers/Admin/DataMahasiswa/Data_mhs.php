@@ -1,22 +1,27 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
-class Data_teknisi extends CI_Controller
+class Data_mhs extends CI_Controller
 {
 
     function __construct()
     {
         parent::__construct();
+        $this->load->helper(array('form', 'url'));
         $this->load->model('data_admin_model');
     }
 
     public function index()
     {
+        // $query = $this->db->get_where('tm_login', ['tm_login_username' => $this->session->userdata("username")])->row_array();
+        // $query_pegawai_id = $query['tm_pegawai_id'];
+        // $pgw = $this->db->get_where('tm_pegawai', ['tm_pegawai_id' => $query_pegawai_id])->row_array();
+        // $data['pegawai_nama'] = $pgw['tm_pegawai_nama'];
         $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
         $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
         $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
         ///////////////////////////////////////////////////////////////////
-        $data['tm_pegawai'] = $this->db->query('SELECT tm_pegawai_id, tm_pegawai_nip, tm_login_password, tm_pegawai_nama, tm_pegawai_email, tm_pegawai_no_telp, tm_pegawai_alamat, tm_pegawai_foto, tm_staff_label FROM tm_pegawai INNER JOIN tm_login USING(tm_pegawai_id) INNER JOIN tm_staff USING (tm_staff_id) WHERE tm_staff_id = 2')->result();
+        $data['tm_pegawai'] = $this->db->query('SELECT tm_pegawai_id, tm_pegawai_nip, tm_login_password, tm_pegawai_nama, tm_pegawai_email, tm_pegawai_no_telp, tm_pegawai_alamat, tm_pegawai_foto, tm_staff_label FROM tm_pegawai INNER JOIN tm_login USING(tm_pegawai_id) INNER JOIN tm_staff USING (tm_staff_id) WHERE tm_staff_id = 1')->result();
         $this->load->view('adminlte/h_admin.php', $data);
-        $this->load->view('Admin/crud/data_teknisi', $data);
+        $this->load->view('Admin/crud/data_mhs', $data);
         $this->load->view("adminlte/s_admin.php");
         $this->load->view("adminlte/f_admin.php");
     }
@@ -25,12 +30,13 @@ class Data_teknisi extends CI_Controller
     {
         $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
         $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
-        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        $data1['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////////////
         $where = array('tm_pegawai_id' => $tm_pegawai_id);
-        $data['tm_pegawai'] = $this->data_admin_model->edit_data($where, 'tm_pegawai JOIN tm_login USING(tm_pegawai_id) JOIN tm_staff USING(tm_staff_id)')->result();
+        $data['pegawai'] = $this->data_admin_model->edit_data($where, 'tm_pegawai JOIN tm_login USING(tm_pegawai_id) JOIN tm_staff USING(tm_staff_id)')->result();
 
-        $this->load->view('adminlte/h_admin.php', $data);
-        $this->load->view('Admin/crud/edit_teknisi', $data);
+        $this->load->view('adminlte/h_admin.php', $data1);
+        $this->load->view('Admin/crud/edit_admin', $data);
         $this->load->view("adminlte/s_admin.php");
         $this->load->view("adminlte/f_admin.php");
     }
@@ -45,11 +51,13 @@ class Data_teknisi extends CI_Controller
         $this->data_admin_model->hapus_data($where, 'tm_pegawai');
 
         @unlink($path . $data['tm_pegawai_foto']);
-        redirect('Admin/DataPegawai/Data_teknisi/index');
+
+        redirect('Admin/DataPegawai/Data_admin/index');
     }
 
     public function update()
     {
+
         $path = './upload/';
 
         $nama_file = "file_" . time(); //nama file + fungsi time
@@ -98,7 +106,7 @@ class Data_teknisi extends CI_Controller
                 // hapus foto pada direktori
                 @unlink($path . $this->input->post('filelama'));
 
-                redirect('Admin/DataPegawai/Data_teknisi/index');
+                redirect('Admin/DataPegawai/Data_admin/index');
             } else {
                 die("gagal update");
             }
@@ -106,22 +114,7 @@ class Data_teknisi extends CI_Controller
             echo "tidak masuk";
         }
     }
-    // public function update2(){
-    //     $tm_login_id = $this->input->post('tm_login_id');
-    //     $tm_login_username = $this->input->post('tm_login_username');
-    //     $tm_login_password = $this->input->post('tm_login_password');
 
-    //     $data = array(
-    //         'tm_login_username' => $tm_login_username,
-    //         'tm_login_password' => $tm_login_password
-    //     );
-    //     $where = array(
-    //         'tm_login_id' => $tm_login_id
-    //     );
-
-    //     $this->data_admin_model->update_data($where,$data,'tm_login');
-    //     redirect('Admin/DataPegawai/Data_teknisi/index');
-    // }
     public function input()
     {
         $this->load->library('upload');
@@ -152,11 +145,11 @@ class Data_teknisi extends CI_Controller
 
                 //pesan yang muncul jika berhasil diupload pada session flashdata
                 $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-success\" id=\"alert\">Upload gambar berhasil !!</div></div>");
-                redirect('Admin/DataPegawai/Data_teknisi/tambah2'); //jika berhasil maka akan ditampilkan view upload
+                redirect('Admin/DataPegawai/Data_admin/tambah2'); //jika berhasil maka akan ditampilkan view upload
             } else {
                 //pesan yang muncul jika terdapat error dimasukkan pada session flashdata
                 $this->session->set_flashdata("pesan", "<div class=\"col-md-12\"><div class=\"alert alert-danger\" id=\"alert\">Gagal upload gambar !!</div></div>");
-                redirect('Admin/DataPegawai/Data_teknisi/tambah'); //jika gagal maka akan ditampilkan form upload
+                redirect('Admin/DataPegawai/Data_admin/tambah'); //jika gagal maka akan ditampilkan form upload
             }
         }
     }
@@ -176,7 +169,7 @@ class Data_teknisi extends CI_Controller
         );
 
         $this->data_admin_model->input_data($data, 'tm_login');
-        redirect('Admin/DataPegawai/Data_teknisi/index');
+        redirect('Admin/DataPegawai/Data_admin/index');
     }
 
     public function tambah()
@@ -186,7 +179,7 @@ class Data_teknisi extends CI_Controller
         $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
         //menampilkan tambah_mahasiswa
         $this->load->view('adminlte/h_admin.php', $data);
-        $this->load->view('Admin/crud/tambah_teknisi');
+        $this->load->view('Admin/crud/tambah_admin');
         $this->load->view("adminlte/s_admin.php");
         $this->load->view("adminlte/f_admin.php");
     }
@@ -199,9 +192,34 @@ class Data_teknisi extends CI_Controller
         //menampilkan tambah_mahasiswa
         $data['tm_pegawai'] = $this->data_admin_model->max_data();
         // $data['tm_pegawai']=$this->db->query('SELECT MAX(tm_pegawai_id) FROM tm_pegawai')->result();
+        
         $this->load->view('adminlte/h_admin.php', $data);
-        $this->load->view('Admin/crud/tambah_teknisi2', $data);
+        $this->load->view('Admin/crud/tambah_admin_2', $data);
         $this->load->view("adminlte/s_admin.php");
         $this->load->view("adminlte/f_admin.php");
+    }
+
+    // fungsi untukupload image
+    private function _uploadImage($name)
+    {
+        // konfigurasi
+        $config['upload_path']          = './upload/';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg|pdf';
+        $config['encrypt_name']         = TRUE; //Enkripsi nama yang terupload
+        $config['overwrite']            = TRUE;
+        $config['max_size'] = '3072'; //maksimum besar file 3M
+        $config['max_width']  = '5000'; //lebar maksimum 5000 px
+        $config['max_height']  = '5000'; //tinggi maksimu 5000 px
+        $config['file_ext_tolower']     = TRUE;
+
+        $this->load->library('upload', $config);
+
+        // bila berhasil
+        if ($this->upload->do_upload($name)) {
+            // ambil nama file foto
+            return $this->upload->data("file_name");
+        } else {
+            return "";
+        }
     }
 }

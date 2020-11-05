@@ -42,8 +42,8 @@
                                                 <input type="hidden" name="tm_level_id" value="<?php echo $lvl->tm_level_id; ?>" class="form-control" placeholder="Nama Topik" required>
                                                 <input type="text" name="tm_level_nama" id="tm_level_nama" value="<?php echo $lvl->tm_level_nama; ?>" class="form-control" placeholder="Nama Topik" required>
                                             </div>
-                                            <a class="btn btn-danger btn-sm" href="<?php echo base_url('admin/level/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i>Cancel</a>
-                                            <button type="submit" class="btn btn-success btn-sm"><i class=" fas fa-plus fa-sm"></i>Save</button>
+                                            <a class="btn btn-danger btn-flat" href="<?php echo base_url('admin/level/') ?>"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                                            <button type="submit" class="btn btn-success btn-flat"><i class=" fas fa-plus fa-sm"></i> Save </button>
                                         </form>
                                 </div>
                             <?php } ?>

@@ -14,7 +14,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Data Pegawai</li>
+              <li class="breadcrumb-item active">Data Mahasiswa</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -26,7 +26,7 @@
     <section class="content">
       <div class="card">
         <div class="card-header bg-success">
-          <h3 class="card-title">Data Admin</h3>
+          <h3 class="card-title">Data Mahasiswa</h3>
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
             <button type="button" class="btn btn-tool" data-card-widget="remove"><i class="fas fa-times"></i></button>
@@ -39,32 +39,30 @@
             <thead>
               <tr>
                 <th scope="col" width="5%">No.</th>
-                <th scope="col">NIP</th>
+                <th scope="col">NIM</th>
                 <th scope="col">Password</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Email</th>
                 <th scope="col">No. Telp</th>
                 <th scope="col">Foto</th>
-                <th scope="col">Staff</th>
                 <th scope="col" width="10%">Aksi</th>
               </tr>
             </thead>
             <tbody>
               <?php $no = 1;
-              foreach ($tm_pegawai as $baris) {
+              foreach ($tm_mahasiswa as $baris) {
               ?>
                 <tr>
                   <td><?php echo $no++; ?></td>
-                  <td><?php echo $baris->tm_pegawai_nip; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_nip; ?></td>
                   <td><?php echo $baris->tm_login_password; ?></td>
-                  <td><?php echo $baris->tm_pegawai_nama; ?></td>
-                  <td><?php echo $baris->tm_pegawai_email; ?></td>
-                  <td><?php echo $baris->tm_pegawai_no_telp; ?></td>
-                  <td><img src="<?= base_url() ?>upload/<?= $baris->tm_pegawai_foto; ?>" width="80px" height="100px"></td>
-                  <td><?php echo $baris->tm_staff_label; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_nama; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_email; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_no_telp; ?></td>
+                  <td><img src="<?= base_url() ?>upload/<?= $baris->tm_mahasiswa_foto; ?>" width="80px" height="100px"></td>
                   <td class="text-center py-0 align-middle">
-                    <a><?php echo anchor('Admin/DataPegawai/Data_admin/edit/' . $baris->tm_pegawai_id, '<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>') ?></a>
-                    <a><?php echo anchor('Admin/DataPegawai/Data_admin/hapus/' . $baris->tm_pegawai_id, '<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>') ?></a>
+                    <a><?php echo anchor('Admin/DataMahasiswa/Data_mhs/edit/' . $baris->tm_mahasiswa_id, '<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>') ?></a>
+                    <a><?php echo anchor('Admin/DataMahasiswa/Data_mhs/hapus/' . $baris->tm_mahasiswa_id, '<div class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></div>') ?></a>
                   </td>
                 </tr>
               <?php } ?>
