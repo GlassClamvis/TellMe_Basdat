@@ -1,4 +1,4 @@
-<?php $this->load->view('adminlte/h_admin.php') ?>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -53,9 +53,9 @@
                                         <div class="form-row">
                                             <div class="form-group col-md-3">
                                                 <?php $a = $this->session->userdata('id_peg');
-                                                $b = $this->session->userdata('nama_peg');
+                                                $b = $this->session->userdata('username');
                                                 ?>
-                                                <input type="hidden" value="<?php echo $a ?>" name="tm_pegawai_id" class="form-control" placeholder="Nama pegawai" required>
+                                                <input type="text" value="<?php echo $a ?>" name="tm_pegawai_id" class="form-control" placeholder="Nama pegawai" required>
                                             </div>
 
                                         </div>
@@ -73,5 +73,3 @@
     </section>
     <!-- /.content -->
 </div>
-<?php $this->load->view("adminlte/s_admin.php") ?>
-<?php $this->load->view("adminlte/f_admin.php") ?>

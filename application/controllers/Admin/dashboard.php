@@ -6,7 +6,7 @@ class dashboard extends CI_Controller
     parent::__construct();
 
     $this->load->helper('url');
-    $this->load->model('data_admin_model');
+    $this->load->model('m_data_admin');
     //validasi jika user belum login
     if ($this->session->userdata('masuk') != TRUE) {
       $url = base_url();
@@ -28,12 +28,11 @@ class dashboard extends CI_Controller
     // var_dump($this->session->userdata("username"));
     // var_dump($data['pegawai']);
     // die;
-    $data['jum_adm'] = $this->data_admin_model->jum_admin();
-    $data['jum_mhs'] = $this->data_admin_model->jum_mahasiswa();
+    $data['jum_adm'] = $this->m_data_admin->jum_admin();
 
-    $this->load->view('adminlte/h_admin.php', $data);
-    $this->load->view("adminlte/d_admin.php");
-    $this->load->view("adminlte/s_admin.php");
-    $this->load->view("adminlte/f_admin.php");
+    // $this->load->view('adminlte/h_admin.php', $data);
+    $this->template->views("templateadm/adminlte/d_admin", $data);
+    // $this->load->view("adminlte/s_admin.php");
+    // $this->load->view("adminlte/f_admin.php");
   }
 }

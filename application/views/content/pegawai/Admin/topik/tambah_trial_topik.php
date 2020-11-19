@@ -1,4 +1,4 @@
-<?php $this->load->view('adminlte/h_admin.php') ?>
+
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -72,5 +72,3 @@
     </section>
     <!-- /.content -->
 </div>
-<?php $this->load->view("adminlte/s_admin.php") ?>
-<?php $this->load->view("adminlte/f_admin.php") ?>
