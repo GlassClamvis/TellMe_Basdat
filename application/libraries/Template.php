@@ -36,6 +36,14 @@ class Template
     $this->_ci->load->view('content/v_lupa_password', $data);
   }
 
+  function Student($template = NULL, $data = NULL) {
+      $data['head'] = $this->_ci->load->view('templates/head', $data, TRUE);
+      $data['header_mahasiswa'] = $this->_ci->load->view('templates/header_mahasiswa', $data, TRUE);
+      $data['footer'] = $this->_ci->load->view('templates/footer', $data, TRUE);
+      $data['js'] = $this->_ci->load->view('templates/js', $data, TRUE);
+      $this->_ci->load->view('content/mahasiswa/v_mahasiswa', $data);
+  }
+
   function views($template = NULL, $data = NULL)
   {
     if ($template != NULL) {
