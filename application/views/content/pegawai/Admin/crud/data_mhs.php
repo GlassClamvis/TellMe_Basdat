@@ -34,15 +34,19 @@
         </div>
         <!-- /.card-header -->
         <div class="card-body">
-          <a class="btn btn-sm btn-primary mb-4" href="http://localhost/TellMe_Basdat/Admin/DataPegawai/Data_admin/tambah"><i class=" fas fa-plus fa-sm"></i>Tambah Pegawai</a>
+          <a class="btn btn-sm btn-primary mb-4" href="http://localhost/TellMe_Basdat/Admin/DataMahasiswa/Data_mhs/tambah"><i class=" fas fa-plus fa-sm">&nbsp;</i>Tambah Mahasiswa</a>
           <table id="example1" class="table table-bordered table-striped">
             <thead>
               <tr>
                 <th scope="col" width="5%">No.</th>
-                <th scope="col">NIM</th>
-                <th scope="col">Password</th>
                 <th scope="col">Nama</th>
                 <th scope="col">Email</th>
+                <th scope="col">NIM</th>
+                <th scope="col">Username</th>
+                <th scope="col">Password</th>
+                <th scope="col">Jurusan</th>
+                <th scope="col">Prodi</th>
+                <th scope="col">Semester</th>
                 <th scope="col">No. Telp</th>
                 <th scope="col">Foto</th>
                 <th scope="col" width="10%">Aksi</th>
@@ -54,11 +58,15 @@
               ?>
                 <tr>
                   <td><?php echo $no++; ?></td>
-                  <td><?php echo $baris->tm_mahasiswa_nip; ?></td>
-                  <td><?php echo $baris->tm_login_password; ?></td>
                   <td><?php echo $baris->tm_mahasiswa_nama; ?></td>
                   <td><?php echo $baris->tm_mahasiswa_email; ?></td>
-                  <td><?php echo $baris->tm_mahasiswa_no_telp; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_nim; ?></td>
+                  <td><?php echo $baris->tm_login_username; ?></td>
+                  <td><?php echo $baris->tm_login_password; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_jurusan; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_prodi; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_semester; ?></td>
+                  <td><?php echo $baris->tm_mahasiswa_telp; ?></td>
                   <td><img src="<?= base_url() ?>upload/<?= $baris->tm_mahasiswa_foto; ?>" width="80px" height="100px"></td>
                   <td class="text-center py-0 align-middle">
                     <a><?php echo anchor('Admin/DataMahasiswa/Data_mhs/edit/' . $baris->tm_mahasiswa_id, '<div class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></div>') ?></a>
@@ -76,7 +84,6 @@
                 <th scope="col">Email</th>
                 <th scope="col">No. Telp</th>
                 <th scope="col">Foto</th>
-                <th scope="col">Staff</th>
                 <th scope="col">Aksi</th>
               </tr>
             </tfoot>

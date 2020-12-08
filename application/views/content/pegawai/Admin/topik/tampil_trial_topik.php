@@ -1,4 +1,4 @@
-<?php $this->load->view('adminlte/h_admin.php') ?>
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -95,5 +95,3 @@
 </div>
 <!-- /.content-wrapper -->
 <!-- Button trigger modal -->
-<?php $this->load->view("adminlte/s_admin.php") ?>
-<?php $this->load->view("adminlte/f_admin.php") ?>

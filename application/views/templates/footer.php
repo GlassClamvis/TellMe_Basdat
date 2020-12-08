@@ -1,34 +1,34 @@
-<div class="js-fix-footer  border-top-2">
+<!-- <div class="js-fix-footer  border-top-2">
     <div class="container page-section py-lg-48pt">
         <div class="row">
             <div class="col-md-8">
                 <div class="row">
                     <div class="col-6 col-md-4 mb-24pt mb-md-0">
                         <h4 class="">Learn</h4>
-                        <nav class="nav nav-links nav--flush flex-column">
+                        <nav class="nav nav-links nav--flush flex-column"> -->
                             <!-- <a class="nav-link" href="library.html">Library</a>
                             <a class="nav-link" href="library-featured.html">Featured</a>
                             <a class="nav-link" href="library-filters.html">Explore</a>
                             <a class="nav-link" href="paths.html">Learning Paths</a> -->
-                        </nav>
+                        <!-- </nav>
                     </div>
                     <div class="col-6 col-md-4 mb-24pt mb-md-0">
                         <h4 class="">Join us</h4>
-                        <nav class="nav nav-links nav--flush flex-column">
+                        <nav class="nav nav-links nav--flush flex-column"> -->
                             <!-- <a class="nav-link" href="pricing.html">Pricing</a>
                             <a class="nav-link" href="login.html">Login</a>
                             <a class="nav-link" href="signup.html">Sign Up</a>
                             <a class="nav-link" href="signup-payment.html">Payment</a> -->
-                        </nav>
+                        <!-- </nav>
                     </div>
                     <div class="col-6 col-md-4 mb-32pt mb-md-0">
                         <h4 class="">Community</h4>
-                        <nav class="nav nav-links nav--flush flex-column">
+                        <nav class="nav nav-links nav--flush flex-column"> -->
                             <!-- <a class="nav-link" href="student-discussions.html">Discussions</a>
                             <a class="nav-link" href="student-discussions-ask.html">Ask Question</a>
                             <a class="nav-link" href="student-profile.html">Student Profile</a>
                             <a class="nav-link" href="instructor-profile.html">Instructor Profile</a> -->
-                        </nav>
+                        <!-- </nav>
                     </div>
                 </div>
             </div>
@@ -39,19 +39,17 @@
                 <p class="text-muted mb-0 mb-lg-16pt">Tell Me Basdat adalah Website Learning Tutorial Untuk Matakuliah Database.</p>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="bg-footer page-section py-lg-32pt">
         <div class="container">
             <div class="row">
                 <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
                     <p class="text-white-70 mb-8pt"><strong>Follow us</strong></p>
                     <nav class="nav nav-links nav--flush">
-                        <a href="#" class="nav-link mr-8pt"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/facebook-square@2x.png')?>" width="24" height="24" alt="Facebook"></a>
-                        <a href="#" class="nav-link mr-8pt"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/twitter-square@2x.png')?>" width="24" height="24" alt="Twitter"></a>
-                        <a href="#" class="nav-link mr-8pt"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/vimeo-square@2x.png')?>" width="24" height="24" alt="Vimeo"></a>
-                        <a href="#" class="nav-link"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/youtube-square@2x.png')?>" width="24" height="24" alt="YouTube"></a>
+                        <a href="https://www.facebook.com/jtipolije/" class="nav-link mr-8pt"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/facebook-square@2x.png')?>" width="24" height="24" alt="Facebook"></a>
+                        <a href="https://www.youtube.com/c/JTIPOLIJE/discussion" class="nav-link"><img src="<?php echo base_url('assets/tealdark/images/icon/footer/youtube-square@2x.png')?>" width="24" height="24" alt="YouTube"></a>
                     </nav>
-                </div>
+                <!-- </div>
                 <div class="col-md-6 col-sm-4 mb-24pt mb-md-0 d-flex align-items-center">
                     <a href="" class="btn btn-outline-white">English <span class="icon--right material-icons">arrow_drop_down</span></a>
                 </div>
@@ -61,7 +59,7 @@
                         <a href="" class="text-white-70 text-underline">Privacy policy</a>
                     </p>
                     <p class="text-white-50 mb-0">Copyright 2019 &copy; All rights reserved.</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -95,8 +93,12 @@
             </div>
         </li>
         <li class="nav-item dropup">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Student</a>
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Jurusan</a>
             <div class="dropdown-menu">
+            <a class="dropdown-item" href="index.html">Manajemen Informatika</a>
+            <a class="dropdown-item" href="index.html">Teknik Komputer</a>
+            <a class="dropdown-item" href="index.html">Teknik Informatika</a>
+                <div class="dropdown-divider"></div>
                 <!-- <a class="dropdown-item" href="student-dashboard.html">Dashboard</a>
                 <a class="dropdown-item" href="student-my-courses.html">My Courses</a>
                 <a class="dropdown-item" href="student-take-course.html">Take Course</a>
@@ -109,10 +111,10 @@
                 <a class="dropdown-item" href="student-path-assessment.html">Skill Assessment</a>
                 <a class="dropdown-item" href="student-path-assessment-result.html">Skill Result</a> -->
             </div>
-        </li>
+        <!-- </li>
         <li class="nav-item dropup">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Instructor</a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu"> -->
                 <!-- <a class="dropdown-item" href="instructor-dashboard.html">Dashboard</a>
                 <a class="dropdown-item" href="instructor-courses.html">Courses</a>
                 <a class="dropdown-item" href="instructor-quizzes.html">Quizzes</a>
@@ -123,10 +125,10 @@
                 <a class="dropdown-item" href="instructor-earnings.html">Earnings</a>
                 <a class="dropdown-item" href="instructor-statement.html">Statement</a> -->
             </div>
-        </li>
+        <!-- </li>
         <li class="nav-item dropup">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Community</a>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu"> -->
                 <!-- <a class="dropdown-item" href="student-discussions.html">Discussions</a>
                 <a class="dropdown-item" href="student-discussion.html">Discussion Details</a>
                 <a class="dropdown-item" href="student-discussions-ask.html">Ask Question</a>
@@ -135,11 +137,11 @@
                 <a class="dropdown-item" href="instructor-profile.html">Instructor Profile</a> -->
             </div>
         </li>
-        <li class="nav-item dropup active">
+        <!-- <li class="nav-item dropup active">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Account</a>
             <div class="dropdown-menu dropdown-menu-right">
                 <a class="dropdown-item" href="pricing.html">Pricing</a>
-                <div class="dropdown-divider"></div>
+                <div class="dropdown-divider"></div> -->
                 <!-- <a class="dropdown-item active" href="login.html">Login</a>
                 <a class="dropdown-item" href="signup.html">Signup</a>
                 <a class="dropdown-item" href="signup-payment.html">Payment</a>
@@ -157,10 +159,10 @@
                 <a class="dropdown-item" href="student-billing-history.html">Payment History</a>
                 <a class="dropdown-item" href="student-billing-invoice.html">Invoice</a> -->
             </div>
-        </li>
+        <!-- </li>
         <li class="nav-item dropup">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Components</a>
-            <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-menu dropdown-menu-right"> -->
                 <!-- <a class="dropdown-item" href="ui-buttons.html">Buttons</a>
                 <a class="dropdown-item" href="ui-charts.html">Charts</a>
                 <a class="dropdown-item" href="ui-avatars.html">Avatars</a>

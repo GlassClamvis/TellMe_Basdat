@@ -10,46 +10,74 @@ class topik extends CI_Controller
 
     public function index()
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $data['topik'] = $this->m_topik->tampil_topik()->result();
-        $this->load->view('admin/topik/tampil_topik_sub_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/tampil_topik_sub_topik', $data);
     }
     public function trial_topik()
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $data['trial_topik'] = $this->m_topik->tampil_trial_topik()->result();
-        $this->load->view('admin/topik/tampil_trial_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/tampil_trial_topik', $data);
     }
 
     public function tambah_trial_topik()
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $data['topik'] = $this->m_topik->tampil_topik()->result();
-        $this->load->view('admin/topik/tambah_trial_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/tambah_trial_topik', $data);
     }
 
     public function tambah_topik()
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $data['topik']     = $this->m_topik->tampil_topik()->result();
         $data['level']     = $this->m_topik->tampil_level()->result();
-        $this->load->view('admin/topik/tambah_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/tambah_topik', $data);
     }
 
     public function tambah_sub_topik()
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $data['topik'] = $this->m_topik->tampil_topik()->result();
-        $this->load->view('admin/topik/tambah_sub_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/tambah_sub_topik', $data);
     }
 
     public function edt_topik()
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $a = $this->uri->segment('4');
         $data['data_hoki'] = $this->m_topik->data_topik($a);
-        $this->load->view('admin/topik/update_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/update_topik', $data);
     }
 
     public function edt_sub_topik()
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $a = $this->uri->segment('4');
         $data['data_sub_hoki'] = $this->m_topik->data_sub_topik($a);
-        $this->load->view('admin/topik/update_sub_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/update_sub_topik', $data);
     }
 
     public function generate_topik()
@@ -235,26 +263,38 @@ class topik extends CI_Controller
 
     public function detail_topik($tm_topik_id)
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $this->load->model('m_topik');
         $data['sub_topik'] = $this->m_topik->tampil_sub_topik()->result();
         $detail = $this->m_topik->detail_data_topik($tm_topik_id);
         $data['detail_topik'] = $detail;
-        $this->load->view('admin/topik/detail_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/detail_topik', $data);
     }
 
     public function detail_sub_topik($td_sub_topik_id)
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $this->load->model('m_topik');
         $detail = $this->m_topik->detail_data_sub_topik($td_sub_topik_id);
         $data['detail_sub_topik'] = $detail;
-        $this->load->view('admin/topik/detail_sub_topik', $data);
+        $this->template->views('content/pegawai/admin/topik/detail_sub_topik', $data);
     }
 
     public function edit_trial_topik($tm_trial_topik_id)
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $where = array('tm_trial_topik_id' => $tm_trial_topik_id);
         $data['trial_topik'] = $this->m_topik->edit_topik($where, 'tm_trial_topik')->result();
-        $this->load->view('Admin/topik/update_trial_topik', $data);
+        $this->template->views('content/pegawai/Admin/topik/update_trial_topik', $data);
     }
     public function hapus($tm_trial_topik_id)
     {

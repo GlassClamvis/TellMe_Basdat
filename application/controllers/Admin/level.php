@@ -9,15 +9,22 @@ class level extends CI_Controller
     }
     public function index()
     {
-
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $data['level']     = $this->m_topik->tampil_level()->result();
-        $this->load->view('admin/level/tampil_level', $data);
+        $this->template->views('content/pegawai/admin/level/tampil_level', $data);
     }
 
     public function tambah_level()
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        //////////////////////////////////////////////////////
         $data['level']     = $this->m_topik->tampil_level()->result();
-        $this->load->view('admin/level/tambah_level', $data);
+        $this->template->views('content/pegawai/admin/level/tambah_level', $data);
     }
 
     public function generate_level()
@@ -45,19 +52,23 @@ class level extends CI_Controller
 
         );
         $this->m_topik->tambah_data($data, 'tm_level');
-        redirect('admin/level');
+        redirect('content/pegawai/admin/level');
     }
     public function edit($tm_level_id)
     {
+        $this->db->join('tm_login', 'tm_login.tm_pegawai_id = tm_pegawai.tm_pegawai_id');
+        $this->db->where('tm_login.tm_login_username', $this->session->userdata("username"));
+        $data['pegawai'] = $this->db->get('tm_pegawai')->row_array();
+        ///////////////////////////////////////////////////////
         $where = array('tm_level_id' => $tm_level_id);
         $data['level'] = $this->m_topik->edit_topik($where, 'tm_level')->result();
-        $this->load->view('Admin/level/update_level', $data);
+        $this->template->views('content/pegawai/admin/level/update_level', $data);
     }
     public function hapus($tm_level_id)
     {
         $where = array('tm_level_id' => $tm_level_id);
         $this->m_topik->delete_data($where, 'tm_level');
-        redirect('Admin/level/index');
+        redirect('content/pegawai/admin/level/index');
     }
 
     public function update()
@@ -76,6 +87,6 @@ class level extends CI_Controller
         );
 
         $this->m_topik->update_data($where, $data, 'tm_level');
-        redirect('Admin/level/index');
+        redirect('admin/level/index');
     }
 }
