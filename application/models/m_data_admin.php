@@ -43,6 +43,7 @@ class m_data_admin extends CI_model
         return $max_id;
     }
 
+<<<<<<< HEAD
     function max_data2()
     {
         $query = $this->db->query("SELECT MAX(tm_mahasiswa_id) as max_id FROM tm_mahasiswa");
@@ -54,6 +55,8 @@ class m_data_admin extends CI_model
         return $max_id;
     }
 
+=======
+>>>>>>> e3f02991fb9a731be38fee296ff287488a2732fb
     function jum_admin()
     {
         $this->db->select('*');

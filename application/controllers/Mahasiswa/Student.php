@@ -2,8 +2,9 @@
 class Student extends CI_Controller{
   function __construct(){
     parent::__construct();
+    $this->load->library('form_validation', 'upload');
     $this->load->model('m_student');
-    $this->load->helper('url');
+    $this->load->helper('url', 'form');
     //validasi jika user belum login
     if($this->session->userdata('masuk') != TRUE){
 			$url=base_url();
@@ -12,21 +13,14 @@ class Student extends CI_Controller{
   }
 
   function index(){
-    $this->load->view('content/mahasiswa/v_mahasiswa');
+    $this->template->student('v_student');
+    $this->m_student->getAll();
   }
 
   public function edit(){
       $where = $this->session->userdata('id_mahasiswa');
       $data['mahasiswa'] = $this->m_student->view_profile($where, 'tm_mahasiswa')->result();
       $this->load->view('content/mahasiswa/v_update_mahasiswa',$data);
-      //$where = $this->session->userdata('id_mahasiswa');
-      //echo $where;
-  }
-
-  public function edit_foto(){
-      $where = $this->session->userdata('id_mahasiswa');
-      $data['mahasiswa'] = $this->m_student->view_profile($where, 'tm_mahasiswa')->result();
-      $this->load->view('content/mahasiswa/v_photo_mahasiswa',$data);
       //$where = $this->session->userdata('id_mahasiswa');
       //echo $where;
   }
@@ -64,42 +58,81 @@ class Student extends CI_Controller{
       );
 
       $this->m_student->update_data_mahasiswa($where,$data,'tm_mahasiswa');
-      redirect(base_url('Mahasiswa/Student'));
+      redirect(base_url('student/edit'));
+  }
+
+  public function ubah_password(){
+    $this->form_validation->set_rules('password_lama', 'Password Lama', 'required|trim');
+    $this->form_validation->set_rules('password_baru', 'Password Baru', 'required|trim|min_length[6]|matches[konfirmasi_password]');
+    $this->form_validation->set_rules('konfirmasi_password', 'Konfirmasi Password', 'required|trim|min_length[6]|matches[password_baru]');
+
+    if($this->form_validation->run() == FALSE){
+      $this->load->view('content/mahasiswa/v_ubah_password_mahasiswa');
+    }else{
+      $password_lama = $this->input->post('password_lama');
+      $password_baru = $this->input->post('password_baru');
+      $cek_pass = $this->m_student->auth_pass();
+      if ($cek_pass == False){
+        $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password lama salah!</div>');
+        $this->load->view('content/mahasiswa/v_ubah_password_mahasiswa');
+      }else{
+        if ($password_lama == $password_baru) {
+          $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Password baru tidak boleh sama dengan password lama!</div>');
+          $this->load->view('content/mahasiswa/v_ubah_password_mahasiswa');
+        }else {
+        $this->m_student->save_pass();
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Password berhasil diubah</div>');
+        $this->load->view('content/mahasiswa/v_ubah_password_mahasiswa');
+        }//end if valid_user
+      }
+    }
   }
 
   public function upload_foto(){
-      $mahasiswa_id = $this->input->post('mahasiswa_id');
+    $where = $this->session->userdata('id_mahasiswa');
+    $data['mahasiswa'] = $this->m_student->view_profile($where, 'tm_mahasiswa')->result();
+    $this->load->view('content/mahasiswa/v_photo_mahasiswa',$data);
 
-      $config['upload_path'] = './assets/tealdark/profil/'; //path folder
-      $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-      $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
+    $config['upload_path']          = './assets/tealdark/profil/';
+    $config['allowed_types']        = 'gif|jpg|png';
+    $config['encrypt_name'] = TRUE; //Enkripsi nama yang terupload
 
-      $this->upload->initialize($config);
-      if(!empty($_FILES['file_gambar']['name'])){
+    $this->upload->initialize($config);
 
-        if ($this->upload->do_upload('file_gambar')){
-            $gbr = $this->upload->data();
-            //Compress Image
-            $config['image_library']='gd2';
-            $config['source_image']='./assets/tealdark/profil/'.$gbr['file_name'];
-            $config['create_thumb']= FALSE;
-            $config['maintain_ratio']= FALSE;
-            $config['quality']= '50%';
-            $config['width']= 600;
-            $config['height']= 600;
-            $config['new_image']= './assets/tealdark/profil/'.$gbr['file_name'];
-            $this->load->library('image_lib', $config);
-            $this->image_lib->resize();
+    if(!empty($_FILES['berkas']['name'])){
 
-            $gambar=$gbr['file_name'];
+      if ($this->upload->do_upload('berkas')){
+        $gbr = $this->upload->data();
+        //Compress Foto
+        $config['image_library']='gd2';
+        $config['source_image']='./assets/tealdark/profil/'.$gbr['file_name'];
+        $config['create_thumb']= FALSE;
+        $config['maintain_ratio']= FALSE;
+        $config['quality']= '50%';
+        $config['width']= 600;
+        $config['height']= 600;
+        $config['new_image']= './assets/tealdark/profil/'.$gbr['file_name'];
+        $this->load->library('image_lib', $config);
+        $this->image_lib->resize();
 
-            $data = array( 'tm_mahasiswa_foto' => $gambar );
-            $where = array( 'tm_mahasiswa_id' => $id );
+        $gambar=$gbr['file_name'];
 
-            $this->m_student->update_data_mahasiswa($data,$where);
-        }
-      }
-      redirect(base_url('Mahasiswa/Student'));
-  }
+        $data = array(
+          'tm_mahasiswa_foto' => $gambar
+        );
+        $this->session->set_userdata('id',$mahasiswa_id);
+        $where = array(
+            'tm_mahasiswa_id' => $mahasiswa_id
+        );
+			  $error = array('error' => $this->upload->display_errors());
+			  $this->load->view('content/mahasiswa/v_photo_mahasiswa', $error);
+        $this->m_student->updateProfil($data,$where);
+      }else{
+			  $data = array('upload_data' => $this->upload->data());
+			  $this->load->view('content/mahasiswa/v_photo_mahasiswa', $data);
+		  }
+	   }
+   }
+
 
 }

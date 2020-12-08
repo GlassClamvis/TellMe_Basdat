@@ -18,7 +18,10 @@
             <!-- /.content-header -->
             <!-- Main content -->
             <section class="content">
+<<<<<<< HEAD
             <div class="row">
+=======
+>>>>>>> e3f02991fb9a731be38fee296ff287488a2732fb
             <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
@@ -33,6 +36,7 @@
               <a href="<?php echo base_url('Admin/DataPegawai/Data_admin/index')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+<<<<<<< HEAD
 
           <div class="col-lg-3 col-6">
           <div class="small-box bg-info">
@@ -72,6 +76,8 @@
               <a href="<?php echo base_url('Admin/DataMahasiswa/Data_mhs/index')?>" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
+=======
+>>>>>>> e3f02991fb9a731be38fee296ff287488a2732fb
             </section>
             <!-- /.content -->
         </div>

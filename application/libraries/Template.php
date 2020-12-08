@@ -24,6 +24,7 @@ class Template
     $data['theme'] = $this->_ci->load->view('templates/theme', $data, TRUE);
     $data['js'] = $this->_ci->load->view('templates/js', $data, TRUE);
     $this->_ci->load->view('content/v_login', $data);
+<<<<<<< HEAD
   }
 
   function Lupa_password($template = NULL, $data = NULL)
@@ -34,6 +35,26 @@ class Template
     $data['theme'] = $this->_ci->load->view('templates/theme', $data, TRUE);
     $data['js'] = $this->_ci->load->view('templates/js', $data, TRUE);
     $this->_ci->load->view('content/v_lupa_password', $data);
+=======
+  }
+
+  function Lupa_password($template = NULL, $data = NULL)
+  {
+    $data['head'] = $this->_ci->load->view('templates/head', $data, TRUE);
+    $data['header'] = $this->_ci->load->view('templates/header', $data, TRUE);
+    $data['footer'] = $this->_ci->load->view('templates/footer', $data, TRUE);
+    $data['theme'] = $this->_ci->load->view('templates/theme', $data, TRUE);
+    $data['js'] = $this->_ci->load->view('templates/js', $data, TRUE);
+    $this->_ci->load->view('content/v_lupa_password', $data);
+  }
+
+  function Student($template = NULL, $data = NULL) {
+      $data['head'] = $this->_ci->load->view('templates/head', $data, TRUE);
+      $data['header_mahasiswa'] = $this->_ci->load->view('templates/header_mahasiswa', $data, TRUE);
+      $data['footer'] = $this->_ci->load->view('templates/footer', $data, TRUE);
+      $data['js'] = $this->_ci->load->view('templates/js', $data, TRUE);
+      $this->_ci->load->view('content/mahasiswa/v_mahasiswa', $data);
+>>>>>>> e3f02991fb9a731be38fee296ff287488a2732fb
   }
 
   function views($template = NULL, $data = NULL)

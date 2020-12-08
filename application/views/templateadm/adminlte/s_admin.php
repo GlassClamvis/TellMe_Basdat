@@ -51,7 +51,11 @@
                             </ul>
                         </li>
                         <li class="nav-item">
+<<<<<<< HEAD
                             <a href="<?php echo base_url('Admin/DataMahasiswa/Data_mhs/index')?>" class="nav-link">
+=======
+                            <a href="pages/widgets.html" class="nav-link">
+>>>>>>> e3f02991fb9a731be38fee296ff287488a2732fb
                                 <i class="fas fa-users" aria-hidden="true"></i>
                                 <p>
                                     Data Mahasiswa

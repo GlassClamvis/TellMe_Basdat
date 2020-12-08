@@ -29,9 +29,12 @@ class dashboard extends CI_Controller
     // var_dump($data['pegawai']);
     // die;
     $data['jum_adm'] = $this->m_data_admin->jum_admin();
+<<<<<<< HEAD
     $data['jum_dsn'] = $this->m_data_admin->jum_dosen();
     $data['jum_tks'] = $this->m_data_admin->jum_teknisi();
     $data['jum_mhs'] = $this->m_data_admin->jum_mahasiswa();
+=======
+>>>>>>> e3f02991fb9a731be38fee296ff287488a2732fb
 
     // $this->load->view('adminlte/h_admin.php', $data);
     $this->template->views("templateadm/adminlte/d_admin", $data);
